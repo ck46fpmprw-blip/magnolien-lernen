@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>PROBE</title>
+<meta name="referrer" content="strict-origin-when-cross-origin"></head><body>
+<h3 id="log">init</h3>
+<div id="A"></div><div id="B"></div><div id="C"></div><div id="D"></div>
+<script>
+var st={A:'.',B:'.',C:'.',D:'.'};
+function show(){var s=[];for(var k in st)s.push(k+'='+st[k]);
+  document.getElementById('log').textContent=s.join(' | ');document.title='PR:'+s.join('~');}
+function mk(id,opts,key){return new YT.Player(id,Object.assign({videoId:'hUlpZUAjglE',width:180,height:110,
+  events:{onReady:function(e){if(st[key][0]==='.'){st[key]='ready';show();}try{e.target.playVideo();}catch(x){}},
+    onStateChange:function(e){if(e.data===1){st[key]='PLAYING';show();}},
+    onError:function(e){st[key]='ERR'+e.data;show();}}},opts));}
+window.onYouTubeIframeAPIReady=function(){show();
+  mk('A',{host:'https://www.youtube-nocookie.com',playerVars:{playsinline:1,autoplay:1,mute:1,origin:location.origin}},'A');
+  mk('B',{host:'https://www.youtube.com',playerVars:{playsinline:1,autoplay:1,mute:1,origin:location.origin}},'B');
+  mk('C',{playerVars:{playsinline:1,autoplay:1,mute:1}},'C');
+  mk('D',{host:'https://www.youtube-nocookie.com',playerVars:{playsinline:1,autoplay:1,mute:1}},'D');};
+var t=document.createElement('script');t.src='https://www.youtube.com/iframe_api';
+t.onerror=function(){st.A='APISCRIPTERR';show();};document.head.appendChild(t);
+</script></body></html>
