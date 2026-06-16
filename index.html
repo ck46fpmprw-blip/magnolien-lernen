@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Magnolien – Deutsch lernen / Μαθαίνω γερμανικά</title>
+<meta name="theme-color" content="#5a2a4a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Magnolien">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%20%22Magnolien%20%E2%80%93%20Deutsch%20lernen%20%28DE/%CE%95%CE%9B%29%22%2C%20%22short_name%22%3A%20%22Magnolien%22%2C%20%22lang%22%3A%20%22de%22%2C%20%22start_url%22%3A%20%22.%22%2C%20%22display%22%3A%20%22standalone%22%2C%20%22orientation%22%3A%20%22portrait%22%2C%20%22background_color%22%3A%20%22%23f4eef1%22%2C%20%22theme_color%22%3A%20%22%235a2a4a%22%2C%20%22description%22%3A%20%22Karaoke-Lerntool%20zu%20Disarstar%20%E2%80%93%20Magnolien%2C%20mit%20griechischen%20Erkl%C3%A4rungen.%22%2C%20%22icons%22%3A%20%5B%7B%22src%22%3A%20%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAS7klEQVR4nO3d25UURxKAYY2OnBHYsA6AB8OTLNMT7QFyYG1AMoc9OtoRDUx31yUvERnf97gXabqqOuOvrIJ5%2Bolunt%2B8%2B%2BLwAhx3%2BfOPJ8evDwf2JEMeYA5xcI4A2MGwB4hNFGwnAO4w8AFyEwS3CYArBj7A2gTBV%2BUDwNAHqOlS/AXDsh/e4AegcgiU%2BtCGPgD3XArFQIkPavADsMelQAgs/QENfgDOuCwcAkt%2BMIMfgJYuC4bAUh/I4Aegp8tCIbDEBzH4ARjpskAIpP4ABj8AM10Sh8DPPyVl%2BAMw23Pi3/qarlwyH2wA1nVJthuQagfA8AcgqudkN6gpaiXbQQWgtkuC3YDwOwCGPwDZPCe4cQ0dABkOIABknGEhtyiiHzQAyP5IINwOgOEPwGqeA97YhgqAiAcIAFaccWECINqBAYCVZ930ZxKRDgYAVHkvYOoOgOEPQFXPk2%2BAf676wQFgtpmzcEoAGP4AMHcmDg8Awx8A5s/GoQFg%2BANAjBk5LAAMfwCIMyuHBIDhDwCxZmb3ADD8ASDe7AzzNwECAON0DQB3/wAQc4Z2CwDDHwDiztIuAWD4A0Dsmdo8AAx/AIg/W70ECAAFNQ0Ad/8A0EfrGdssAAx/AOir5axtEgCGPwCM0WrmegcAAAo6HQDu/gFgrBaz91QAGP4AMMfZGewRAAAUdDgA3P0DwFxnZvGhADD8ASCGozPZIwAAKGh3ALj7B4BYjsxmOwAAUNCuAHD3DwAx7Z3RdgAAoKDNAeDuHwBi2zOr7QAAQEGbAsDdPwDksHVm2wEAgIIeBoC7fwDIZcvs/mXMjwKM9vHzp2b/rA9v3zf7ZwExPN37L939Q61Bv5cwgNguf/5xc87bAYBEZg77rT%2BPKIAcBAAEFm3gH/mZBQHEdHNrwPY/zJFx6G8lBiDOYwA7ABDAykP/1ucUAzDXq1Xg7h/GqDL47xECMGcXwA4ADGbo3z4eYgDGEQAwiMG//RgJAejvhy0B2//QlsF/nBCAfo8B7ABAJwZ/u2MoBKA9vwwIOjD8HU%2BIzg4ANGTw92M3ANr65nmA5/9wjME/nscCcO49AI8A4CTDfw7HHc7xCAAOMoDm81gAjrMDAAcY/rE4H3AiADz/h20Mm5icF3jsetZ7BAAbGTDxeSQA23kEABsY/rk4X/CYAIAHDJOcnDe4TwDAHYZIbs4fPAgALwDCjwyPNTiP8K2Xme8lQPiOgbEeLwfCjzwCgCuG/9qcX/hKAMD/GQ41OM/wDwEAhkI5IgAEABgGRYkAqrMDAAAFPfkjgFTmLpAPb987CJRkB4CyDH9cB1QmACjJ8Mf1QHUCgHIMf1wXIAAoxvDH9QH/sAMAAAUJAMpw94/rBL4SAJRg%2BON6gW8JAJZn%2BOO6gR8JAAAoSACwNHf/uH7gdQKAZRn%2BuI7gNgEAAAUJAJbk7h/XE9wnAACgIAHActz947qCxwQASzH8cX3BNgIAAAoSACzD3T%2BuM9hOAABAQQKAJbj7x/UG%2BwgAAChIAJCeu39cd7CfAACAggQAABQkAEjN9j%2BuPzhGAABAQU/Pb959mf1DsJ6Wd%2BYf3r7v/u%2BA1tfoiO8AnCEAOMUQhnmEAWcIADYz7CE%2BUcBWAoCbDHzITxBwiwDgG4Y%2BrEsMcE0AYOhDQWIAAVCYu31ACNQlAIox9IFbxEAtAqAIgx/YSgjUIAAWZ/ADRwmBtQmARRn8QCtCYE1%2BF8CCDH/AmsIjdgAWYvADvdkNWIcAWIDBD4wmBPLzCCA5wx%2Bw9nCEHYCkDH4gCrsBOdkBSMjwByKxJuUkAJLxRQMisjbl4xFAEr5cQBYeCeRgByABwx/IxJqVgwAIzhcJyMjaFZ8ACMwXCMjMGhabAAjKFwdYgbUsLi8BBuPLAqzKy4Gx2AEIxPAHVmaNi0UABOGLAVRgrYtDAATgCwFUYs2LQQBM5osAVGTtm08AAEBBAmAiBQxUZg2cSwBM4sIHsBbOJAAmMPwBrImzCYDBDH8Aa2MEAmAgwx/AGhmFAACAggTAIO7%2BAayVkQiAAQx/AGtmNAKgM8MfwNoZkQAAgIIEQEfu/gGsoVEJgE4MfwBraWQCAAAKEgAduPsHsKZGJwAAoCAB0Ji7f4D2rK3tCYCGXKAA/Vhj2xIAAFCQAGhEmQL0Z61tRwAAQEECoAFFCjCONbcNAQAABQmAk5QowHjW3vMEAAAUJAAAoCABcIItKIB5rMHnCAAAKEgAHKQ8AeazFh8nAACgIAEAAAUJgANsOQHEYU0%2BRgAAQEECAAAKEgA72WoCiMfavJ8AAICCBAAAFCQAAKAgAbCDZ0wAcVmj9xEAAFCQAACAggQAABQkAACgIAGwkZdLAOKzVm8nAACgIAEAAAUJAAAoSAAAQEECAAAKEgAbeKsUIA9r9ja/bPzfAUn99ft/Dv9/f/3tv01/FiAOAQCLODPo9/4zhQHkJwAgqR4D/%2Bi/WxBAPgIAEpk59Lf%2BXGIAchAAEFzUoX%2BLGIAcBAAElW3w3/sMdgUgHgEAgaww9F9jVwDiEQAQwKqD/zV2BSAGfxEQTFZp%2BF%2Br%2BrkhCjsAMIkBaDcAZhIAMJjBf/uYeFkQxvEIAAYy/B0fiEIAwCCGv%2BMEkXgEAJ0Z/MePmUcC0I8dAOjI8Hf8ICoBAJ0Y/o4jRCYAoAPD3/GE6AQANGb49%2BG4QltPz2/efWn8z1zSx8%2BfZv8IBGdAjePlQO758Pa9A7SBHQBowPAfy/GG8wQAABQkAOAkd6NzOO5wjgCAEwyhuRx/OE4AwEGGTwzOAxwjADbyVinXDJ1YnA9eWKu3EwCwk2ETk/MC%2BwgAAChIAMAO7jJjc35gOwEAGxkuOThPsI0A2MHLJXUZKrk4XzVZo/cRAABQkACAB9xN5uS8wX0CAAAKEgA7ecZUi7vI3Jy/OqzN%2BwkAuMHwWIPzCK8TAABQkAA4wFbT%2Btw1rsX5XJs1%2BRgBAAAFCQAAKEgAHGTLaV22i9fkvK7JWnycAACAggTACcpzPe4S1%2Bb8rsUafI4AAICCBAAAFCQATrIFtQ7bwzU4z2uw9p4nAACgIAHQgBIFGMea24YAANvC5XgMAAKgGUUK0J%2B1th07AABQkABoSJkC9GONbUsANOYCzcfz4Jqc91ysre0JAAAoSAB0oFQBrKnRCQAAKEgAdGIXAMBaGpkA6EgEAFhDoxIAlOZN8NqcfyoTAJ3ZBQCwdkYkAAYQAQDWzGgEwCAiAMBaGYkAAICCBMBAdgEArJFRCIDBRACAtTECATCBCACwJs4mACb4%2BPnTjH8tQEjWxDkEwGAudABrYwQCYCDDH8AaGYUAAICCBMAg7v4BrJWRCIABDH8Aa2Y0AqAzwx/A2hmRAKC0X3/77%2BwfgYmcfyoTAB25%2BwewhkYlADox/AGspZEJAAAoSAB04O4fwJoanQAAgIIEQGPu/vPxJnhNznsu1tb2BEBDLlCAfqyxbQkAAChIADSiTAH6s9a2IwDA8%2BByPP8HAdCEIgUYx5rbhh0AAChIAJykRNdhW7gG53kN1t7zBAAAFCQAAKAgAXCCLaj12B5em/O7FmvwOQIAAAoSAAcpz3W5S1yT87oma/FxAgAAChIAAFCQADjAltP6bBevxflcmzX5GAEAAAUJALjBXeManEd4nQDYyVZTLYZHbs5fHdbm/QQAABQkAOABd5E5OW9wnwAAgIIEwA6eMdXlbjIX56sma/Q%2BAgA2MlRycJ5gGwEAOxgusTk/sJ0AAICCBADs5C4zJucF9hEAG3m5hGuGTSzOBy%2Bs1dsJADjI0InBeYBjBACcYPjM5fjDcQIATjKE5nDc4RwBAAAFCQBowN3oWI43nPf0/Obdlwb/nKV5q5Q9/vr9Pw5YJwY/W314%2B97BesAOADRmSPXhuEJbAgA6MKwcT4hOAEAnIsBxhMgEAHQkAhw/iOqX2T8AVIkALwfuP2ZAP3YAYBBDzXGCSAQADCQCHB%2BIwiMAGMwjgdvHBBhHAMAkQsDgh5k8AoDJqt79Vv3cEIUdAAig0m6AwQ8xCAAIOhxXigFDH%2BIRABDUCrsCBj/EJQAguGy7AoY%2B5CAAIJGoMWDoQz4CAJL6fuiODAIDH/ITALCIW0P5TBgY9LAuAQCLM8SB1/iLgDb48Pb9lv8ZAAFYs7cRAABQkAAAgIIEAAAUJAAAoCABAAAFCYCNvFUKEJ%2B1ejsBAAAFCQAAKEgAAEBBAgAAChIAO3i5BCAua/Q%2BAgAAChIAAFCQAACAggTATp4xAcRjbd5PAABAQQIAAAoSAAfYagKIw5p8jAAAgIIEAAAUJAAOsuUEMJ%2B1%2BDgBAAAFCYATlCfAPNbgcwQAABQkAACgIAFwki0ogPGsvecJAAAoSAA0oEQBxrHmtiEAAKAgAdCIIgXoz1rbjgAAgIIEQEPKFKAfa2xbAqAxFyhAe9bW9gQAABQkADpQqgDW1OgEAAAUJAA6sQsAYC2NTAB0JAIArKFRCQAAKEgAdGYXAMDaGZEAGEAEAFgzoxEAg4gAAGtlJAIAAAoSAAPZBQCwRkYhAAYTAQDWxggEwAQiAMCaOJsAmEQEAFgLZxIAE4kAoDJr4FwCAAAKEgCTKWCgImvffAIgAF8EoBJrXgwCIAhfCKACa10cAiAQXwxgZda4WJ6e37z7MvuH4EcfP39yWIAlGPwx2QEIyhcGWIG1LC4BEJgvDpCZNSw2ARCcLxCQkbUrPgGQgC8SkIk1KwcvASbj5UAgKoM/FzsAyfiCARFZm/IRAAn5ogGRWJNy8gggOY8EgFkM/tzsACTnCwhYezjCDsBC7AYAvbnpWIcAWJAQAFoz%2BNfjEcCCfFEBawqP2AFYnN0A4Cg3E2sTAEUIAWArg78GAVCMEABuMfhrEQCFiQHA0K9LACAEoCCDHwHAN%2BwKwLoMfa4JAG4SA5Cfoc8tAoDNBAHEZ%2BCzlQDgFFEA8xj2nCEACB8GtxY58UEUr12jI74DcIYAIDURwGyGM1n5XQAAUJAAIDV3X7j%2B4BgBAAAFCQAAKEgAkJ7HALjuYD8BAAAFCQCWYBcA1xvsIwAAoCABwDLsAuA6g%2B0EAAAUJABYil0AXF%2BwjQBgOSIA1xU8JgAAoCABwJLsAuB6gvsEAAAUJABYll0AXEdwmwBgaSIA1w%2B8TgAAQEECgOXZBcB1Az8SAJQgAnC9wLcEAGWIAFwn8JUAAICCBACl2AXA9QH/EACUIwJwXYAAoCgRgOuB6n6%2B/PnH0%2BwfAmYQAbgOqOrv2e8RAKWJgNqcfyoTAABQkACgPHeBNTnvVCcAwDAox/AHAQD/MhRqcJ7hH3YA4IrhsDbnF776948APr959%2BXqP4fyPn7%2BVP4YrMLgh69e/vi/HQC4wdBYg/MIrxMAcIfhkZvzB7cJAHjAEMnJeYP7BABsYJjk4nzBY9/8HgAvAsJjXg6My%2BCH%2B65//48dANjJkInJeYF9BAAcYNjE4nzAfr8c%2BP8AV0PHI4F5DH5otANw/WwA2MYQmsNxh32%2Bn/F2AKABuwHjGPzQhgCAhoRAPwY/tOUlQOjAsHI8IbpXn/n7%2BwCgHS8JHiekoI3X3vHzCAA681jg%2BDED%2BhEAMIgQ2H6MgP5u/rE/jwGgP48HDH3o7dYf8bcDABNV3hVwtw9z3f2Lf%2BwCwHgrx4ChD2Pd%2Bwv%2B7ABA4CG5QgwY%2BhCTAIBEwzNDEBj4kMPDv/vfYwCIbWYUGPYQ16Pf72MHAJK7NYRbhoFBD%2BvZ9Nv/7AIAQB5bfruv3wUAAAX93KokAID5ts5sOwAAUNDmALALAACx7ZnVdgAAoKBdAWAXAABi2juj7QAAQEG7A8AuAADEcmQ22wEAgIIOBYBdAACI4ehMPrwDIAIAYK4zs9gjAAAo6FQA2AUAgDnOzuDTOwAiAADGajF7PQIAgIKaBIBdAAAYo9XMbbYDIAIAoK%2BWs7bpIwARAAB9tJ6x3gEAgIKaB4BdAACIP1u77ACIAACIPVO7PQIQAQAQd5Z2fQdABABAzBnqJUAAKKh7ANgFAIB4s3PIDoAIAIBYM3PYIwARAABxZuXQdwBEAADEmJHDXwIUAQAwfzZO%2BVMAIgAA5s7EaX8MUAQAUN1l0vCf/vcAiAAAqrpMHP5/m/ovv/b85t2X2T8DAKw%2B%2BMP9TYBRDggAVJh1YQIg2oEBgJVnXKgAiHiAAGDF2RbuB7rmvQAAMrsEHPxhdwCyHDgAyDzDQgdAhgMIABlnV/gf8JpHAgBEdkkw%2BNPsAGQ9sADUckk2o1L9sNfsBgAQwSXZ4E%2B5A7DCAQdgHZfEsyjtD37NbgAAI10SD/4X6T/ANSEAQE%2BXBQb/i2U%2ByDUhAEBLl4UG/4vlPtA1IQDAGZcFB/%2BLZT/YNSEAwB6XhQf/i%2BU/4DUhAED1wf%2BizAf9nhgAoNrQv1byQ18TAgA1XYoO/helP/z3xADA2qoP/WsOxB2CACA3A/82AbCDIACIzcDfTgCcJAoA5jDszxEAHYkDgHMM%2BZ%2B6%2BR%2BWcuYNR1h5vwAAAABJRU5ErkJggg%3D%3D%22%2C%20%22sizes%22%3A%20%22512x512%22%2C%20%22type%22%3A%20%22image/png%22%2C%20%22purpose%22%3A%20%22any%20maskable%22%7D%5D%7D">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<style>
+  :root{--accent:#5a2a4a;--accent2:#7a3a64;--ink:#1c1a1e;--grey:#6a6a6a;--paper:#fff;
+        --bg:#f4eef1;--gr:#0a5b54;--active:#fff7d6;--activeline:#d69e3c;
+        --safe:env(safe-area-inset-top,0px);}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:Georgia,'Times New Roman',serif;line-height:1.5;
+       -webkit-text-size-adjust:100%;}
+  .bar{position:sticky;top:0;z-index:30;
+       background:linear-gradient(135deg,var(--accent),var(--accent2));
+       color:#fff;padding:calc(8px + var(--safe)) 12px 8px;
+       display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;
+       box-shadow:0 2px 8px rgba(0,0,0,.18);}
+  .bar h1{font-size:1.0rem;margin:0;flex:1 1 140px;min-width:120px;}
+  .bar .sub{font-size:.72rem;opacity:.85;font-weight:normal;font-style:italic;display:block;}
+  .ctrls{display:flex;gap:6px;flex-wrap:wrap;font-family:system-ui,sans-serif;}
+  .ctrls button{border:1px solid rgba(255,255,255,.7);background:rgba(255,255,255,.12);
+       color:#fff;padding:6px 10px;border-radius:18px;cursor:pointer;font-size:.8rem;
+       -webkit-tap-highlight-color:transparent;}
+  .ctrls button.off{opacity:.5;text-decoration:line-through;}
+  .ctrls button.sync.on{background:var(--activeline);border-color:#fff;color:#3a1f10;font-weight:bold;}
+  .qr{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:1px;
+      text-decoration:none;background:#fff;padding:4px 4px 2px;border-radius:7px;
+      box-shadow:0 1px 4px rgba(0,0,0,.25);}
+  .qr img{width:46px;height:46px;display:block;image-rendering:pixelated;}
+  .qr span{font-family:system-ui,sans-serif;font-size:.58rem;color:var(--accent);font-weight:bold;}
+
+  /* Player – klebt oben unter der Bar, einklappbar */
+  .playerwrap{position:sticky;top:0;z-index:25;background:#000;
+       box-shadow:0 4px 14px rgba(0,0,0,.3);}
+  .playerwrap .frame{position:relative;padding-bottom:56.25%;height:0;max-width:640px;margin:0 auto;
+       transition:padding-bottom .25s,opacity .2s;}
+  .playerwrap iframe,.playerwrap #ytplayer{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  body.player-min .playerwrap .frame{padding-bottom:0;height:0;opacity:0;}
+  .pbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+        background:var(--accent);color:#fff;font-family:system-ui,sans-serif;
+        font-size:.78rem;padding:4px 10px;}
+  .pbar .pstat{opacity:.85;flex:1 1 auto;}
+  .pbar .ptime{font-variant-numeric:tabular-nums;font-feature-settings:'tnum';opacity:.95;min-width:34px;}
+  .pbar button{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.5);
+        color:#fff;border-radius:14px;padding:3px 10px;cursor:pointer;font-size:.76rem;
+        -webkit-tap-highlight-color:transparent;}
+  #p-play.run{background:var(--activeline);border-color:#fff;color:#3a1f10;font-weight:bold;}
+  /* manuelle Transport-Knöpfe nur bei lokalem file://-Aufruf zeigen (sonst läuft Auto-Sync) */
+  body:not(.is-file) #p-play, body:not(.is-file) #p-zero{display:none;}
+  .filehint{display:none;}
+  body.is-file .filehint{display:block;}
+
+  .legend{max-width:880px;margin:12px auto 0;padding:0 16px;display:flex;flex-wrap:wrap;
+          gap:6px 13px;font-family:system-ui,sans-serif;font-size:.74rem;align-items:center;}
+  .legend .lg{display:inline-flex;align-items:center;gap:5px;}
+  .legend .lgchip{color:#fff;padding:1px 8px;border-radius:9px;font-weight:600;}
+  .legend .lglabel{color:var(--grey);}
+  .help{max-width:880px;margin:9px auto 2px;padding:0 16px;color:var(--grey);font-size:.9rem;}
+  .hint{max-width:880px;margin:8px auto 0;padding:9px 14px;background:#fff4cf;
+        border:1px solid #e6cf72;border-radius:10px;color:#6b5212;font-size:.86rem;
+        font-family:system-ui,sans-serif;}
+  .hint b{color:#4a3a08;}
+  main{max-width:880px;margin:0 auto;padding:8px 16px 60vh;}
+  h2.sec{color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:4px;
+         margin:26px 0 12px;font-size:1.3rem;}
+
+  .ln{position:relative;background:var(--paper);border-radius:10px;padding:12px 15px 12px 18px;
+      margin:0 0 11px;box-shadow:0 1px 5px rgba(0,0,0,.07);border-left:4px solid var(--accent);
+      transition:background .25s,box-shadow .25s,transform .15s;scroll-margin-top:33vh;}
+  .ln .cue{position:absolute;left:-4px;top:0;bottom:0;width:4px;border-radius:4px;background:transparent;}
+  .ln.active{background:var(--active);box-shadow:0 3px 16px rgba(214,158,60,.5);
+      border-left-color:var(--activeline);}
+  .ln.active .cue{background:var(--activeline);}
+  .ln.done{opacity:.82;}
+  .ln .de{font-size:1.16rem;font-weight:bold;line-height:1.7;cursor:pointer;}
+  .ln .gr{color:var(--gr);font-size:1.04rem;margin-top:5px;}
+  .ln .lit{color:#6f636b;font-size:.85rem;font-style:italic;margin-top:2px;}
+  mark.hl{padding:0 3px;border-radius:4px;font-weight:bold;box-decoration-break:clone;
+          -webkit-box-decoration-break:clone;}
+  ul.notes{margin:11px 0 0;padding:0;list-style:none;}
+  ul.notes li.note{padding:7px 11px;margin-top:8px;border-left:4px solid var(--accent);
+       border-radius:0 7px 7px 0;font-family:system-ui,sans-serif;font-size:.89rem;}
+  .kind{font-size:.71rem;color:#fff;padding:1px 8px;border-radius:10px;margin-right:7px;
+        vertical-align:middle;white-space:nowrap;}
+  .term{font-weight:bold;color:var(--ink);}
+  .ngr{color:var(--gr);margin-top:4px;}
+  .nde{color:#595959;margin-top:1px;}
+  .k-Slang .kind{background:#9a3412;}
+  .k-Slang.note{border-left-color:#9a3412;background:#fbe7dd;}
+  mark.k-Slang{background:#fbe7dd;color:#9a3412;}
+  .k-Idiom .kind{background:#7c3aed;}
+  .k-Idiom.note{border-left-color:#7c3aed;background:#efe7fc;}
+  mark.k-Idiom{background:#efe7fc;color:#7c3aed;}
+  .k-Grammatik .kind{background:#1d4ed8;}
+  .k-Grammatik.note{border-left-color:#1d4ed8;background:#e1e8fb;}
+  mark.k-Grammatik{background:#e1e8fb;color:#1d4ed8;}
+  .k-Elision .kind{background:#0e7490;}
+  .k-Elision.note{border-left-color:#0e7490;background:#d8f0f3;}
+  mark.k-Elision{background:#d8f0f3;color:#0e7490;}
+  .k-Kulturbezug .kind{background:#166534;}
+  .k-Kulturbezug.note{border-left-color:#166534;background:#def0e3;}
+  mark.k-Kulturbezug{background:#def0e3;color:#166534;}
+  .k-Wortschatz .kind{background:#854d0e;}
+  .k-Wortschatz.note{border-left-color:#854d0e;background:#f6ecd2;}
+  mark.k-Wortschatz{background:#f6ecd2;color:#854d0e;}
+  .k-Default .kind{background:#5a2a4a;}
+  .k-Default.note{border-left-color:#5a2a4a;background:#f2e7ee;}
+  mark.k-Default{background:#f2e7ee;color:#5a2a4a;}
+  body.hide-gr .gr,body.hide-gr .lit,body.hide-gr .ngr{display:none;}
+  body.hide-notes .notes{display:none;}
+  body.hide-notes mark.hl{background:transparent!important;color:inherit!important;padding:0;}
+
+  /* Sync-Modus: Bottom-Sheet */
+  .syncsheet{position:fixed;left:0;right:0;bottom:0;z-index:60;
+        background:#241019;color:#fff;font-family:system-ui,sans-serif;
+        padding:12px 14px calc(12px + env(safe-area-inset-bottom,0px));
+        box-shadow:0 -6px 24px rgba(0,0,0,.45);transform:translateY(110%);
+        transition:transform .25s;}
+  body.sync-on .syncsheet{transform:translateY(0);}
+  body.sync-on .ln .de{cursor:default;}
+  .syncsheet .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+  .syncsheet .cur{flex:1 1 100%;font-size:.95rem;margin:2px 0 8px;}
+  .syncsheet .cur b{color:var(--activeline);}
+  .syncsheet .tip{flex:1 1 100%;font-size:.78rem;opacity:.8;margin-bottom:8px;}
+  .syncsheet .tap{flex:1 1 auto;background:var(--activeline);color:#241019;border:0;
+        border-radius:12px;padding:15px;font-size:1.05rem;font-weight:bold;cursor:pointer;}
+  .syncsheet .tap:disabled{opacity:.4;}
+  .syncsheet .mini{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.4);
+        color:#fff;border-radius:10px;padding:11px 13px;cursor:pointer;font-size:.85rem;}
+  .syncsheet textarea{width:100%;height:74px;margin-top:8px;border-radius:8px;border:0;
+        font-family:ui-monospace,monospace;font-size:.72rem;padding:7px;display:none;}
+  body.sync-export .syncsheet textarea{display:block;}
+
+  @media(max-width:560px){
+    .bar h1{font-size:.9rem;flex-basis:100%;}
+    .qr img{width:40px;height:40px;}
+    .ln .de{font-size:1.08rem;}
+  }
+</style>
+</head>
+<body class="">
+<div class="bar">
+  <h1>Disarstar – „Magnolien"<span class="sub">Deutsch verstehen / Καταλαβαίνω τα γερμανικά (DE → ΕΛ)</span></h1>
+  <div class="ctrls">
+    <button id="t-gr" title="Übersetzung ein/aus">Μετάφραση</button>
+    <button id="t-notes" title="Erklärungen ein/aus">Erklärungen</button>
+    <button id="t-follow" title="Mitlauf-Scrollen ein/aus">🎯 Mitlauf</button>
+    <button id="t-sync" class="sync" title="Zeiten aufnehmen">⏱ Sync</button>
+  </div>
+  <a class="qr" href="https://www.youtube.com/watch?v=hUlpZUAjglE" target="_blank" rel="noopener" title="QR / Link zum Song – Άκου το τραγούδι"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbwAAAG8AQMAAACffoKcAAAABlBMVEVaKkr///93FDuwAAACGElEQVR42u2cSW7DMBAEB/kA//9L/oBZTM0mJQfn0DyUkINtqHwwGp2ehbL13jUNEBAQEPA30Pwa9dvm9eH9tvlhb16AgG9e3yIcW5tfL1yZ5e20/fr6HK0CqrT6csubIEO07Ta0CijX6stC70kArQKeqdV46zF1oFXAs/Lqrqd+Pt+OWpMAeRVQqdVU4P/1Rx8AUK3V1sVyd/Xy/+k2flVAhVaTMl2ubqS7ueoBYCP8qoCaDOB+meWa48G+bVJbAYp91T0z2qozHHWr1JL9olVAVV6dpc5y3UYjq+UBtAoo0mqZTNmDo0ZYneRVQLWvjtX7qFYmAjsVoFVAbV6dFltVqw+wuqmiVUBhBriqqrISkMavXbpoFVDkq9lOfQnwQau+iIVWAVV5dUWrKvas0qpVlFr0AQB1WvXa36UYY9YYVO00a8ytAKVaLQPW659+OSBgVk4NoFVAVW01SjRNvamaBJixAmp9daxSZLXyykcD7AMAnuCr9YBAmVWNOBoQGkargBKthgLN66x+eiWFVbQKqDzDMvv+qjf/u7WiVUBpBij7q9PyYy7ywwHifrQKKPFVv0bqCaSJQE4C9KwAxRkglVGl43rrCRizAECpVt058951SapeZ6FVwDO0au10QJsRROXFrwp4gFZzT2AVX2V/FfCovOqytHbgetKzAjyyD2B1N2CmFSx8FfCE567wIGVAQEDAf4Gf1YdnKGprOV4AAAAASUVORK5CYII=" alt="QR-Code zum Song"><span>► Song</span></a>
+</div>
+
+<div class="playerwrap">
+  <div class="frame"><div id="ytplayer"></div></div>
+  <div class="pbar">
+    <button id="p-play" title="Mitlauf starten/pausieren">▶ Mitlauf</button>
+    <span class="ptime" id="ptime">0:00</span>
+    <button id="p-zero" title="auf Liedanfang zurücksetzen">⟲</button>
+    <span class="pstat" id="pstat">Player lädt…</span>
+    <button id="p-min" title="Video ein-/ausklappen">Video ▾</button>
+  </div>
+</div>
+
+<div class="legend"><span class="lg"><span class="lgchip" style="background:#9a3412">Slang</span><span class="lglabel">αργκό</span></span><span class="lg"><span class="lgchip" style="background:#7c3aed">Idiom</span><span class="lglabel">ιδιωματισμός</span></span><span class="lg"><span class="lgchip" style="background:#1d4ed8">Grammatik</span><span class="lglabel">γραμματική</span></span><span class="lg"><span class="lgchip" style="background:#0e7490">Elision</span><span class="lglabel">έκθλιψη</span></span><span class="lg"><span class="lgchip" style="background:#166534">Kulturbezug</span><span class="lglabel">πολιτισμ. αναφορά</span></span><span class="lg"><span class="lgchip" style="background:#854d0e">Wortschatz</span><span class="lglabel">λεξιλόγιο</span></span></div>
+<p class="help">Spiele den Song oben und lies Vers für Vers mit: die <strong>gerade gesungene Zeile</strong>
+leuchtet auf und scrollt automatisch mit. Tippe eine deutsche Zeile, um im Video <strong>dorthin zu springen</strong>.
+Die Knöpfe blenden <span style="color:var(--gr)">Übersetzung</span>/Erklärungen aus (Selbst-Test). ·
+<em>Άκου το τραγούδι· ο στίχος που ακούγεται φωτίζεται. Πάτα έναν στίχο για να πας εκεί στο βίντεο.</em></p>
+<div class="hint" id="needsync" style="display:none">
+  ⏱ <b>Noch nicht synchronisiert.</b> Tippe oben auf <b>⏱ Sync</b>, spiele den Song und tippe bei jeder
+  Zeile genau dann, wenn sie gesungen wird — danach läuft die Karaoke automatisch mit. ·
+  <em>Δεν έχει συγχρονιστεί ακόμα: πάτα «⏱ Sync» και χτύπα κάθε στίχο όταν ακούγεται.</em>
+</div>
+<div class="hint filehint">
+  📂 <b>Lokal geöffnet (Datei).</b> Das automatische Mitlaufen über den Player ist hier nicht garantiert.
+  Spiele das Video, tippe dann oben <b>▶ Mitlauf</b> genau bei Liedanfang — oder tippe die gerade gesungene
+  Zeile an. Für vollautomatisches Mitlaufen die App über einen Link/Server öffnen. ·
+  <em>Άνοιξε από σύνδεσμο/σέρβερ για αυτόματο συγχρονισμό.</em>
+</div>
+<main>
+<h2 class="sec">Intro</h2>
+<div class="ln" id="ln0" data-i="0"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Slang">Yeah</mark>, <mark class="hl k-Slang">ey</mark></div><div class="gr">Γιέα, έι</div><ul class="notes"><li class="note k-Slang"><span class="kind">Slang · αργκό</span><span class="term">Yeah</span><div class="ngr">Αγγλικό «yeah» (= ναι), από τα πιο συνηθισμένα ad-lib στο γερμανικό (και διεθνές) ραπ. Εδώ λειτουργεί ως ηχητικό γέμισμα στην αρχή του κομματιού, όχι ως λέξη με σημασιολογικό βάρος. Συνήθης απόδοση στα ελληνικά: «γιέα» / «γιεάχ».</div><div class="nde">≈ ja (englisches Ad-lib, Intro-Füllsel)</div></li><li class="note k-Slang"><span class="kind">Slang · αργκό</span><span class="term">ey</span><div class="ngr">Επιφώνημα της γερμανικής καθομιλουμένης και του ραπ· τραβάει την προσοχή ή λειτουργεί ως γέμισμα. Δεν μεταφράζεται κανονικά, αποδίδεται ηχητικά ως «έι» / «ε». Στο ραπ μπαίνει συχνά στο τέλος ή στην αρχή στίχου σαν σφραγίδα ρυθμού.</div><div class="nde">≈ hey / he (Aufmerksamkeits-Ruf, Füllsel)</div></li></ul></div>
+<h2 class="sec">Part 1</h2>
+<div class="ln" id="ln1" data-i="1"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Elision">Sitz'</mark> unter <mark class="hl k-Wortschatz">strahlend blauem Himmel</mark> und <mark class="hl k-Elision">schreib'</mark> Wintermusik</div><div class="gr">Κάθομαι κάτω από έναν λαμπερό γαλάζιο ουρανό και γράφω χειμωνιάτικη μουσική</div><ul class="notes"><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">Sitz' / schreib'</span><div class="ngr">Στον προφορικό/ραπ λόγο το τελικό -e του ρήματος στο α' ενικό πέφτει και μπαίνει απόστροφος: Sitz' = (ich) sitze, schreib' = (ich) schreibe. Επίσης παραλείπεται συχνά το ich. Θα το δεις σε όλο το τραγούδι (Folg', Mach', Komm', Steig', fahr', geh').</div><div class="nde">≈ Ich sitze ... und schreibe Wintermusik</div></li><li class="note k-Wortschatz"><span class="kind">Wortschatz · λεξιλόγιο</span><span class="term">strahlend blauem Himmel</span><div class="ngr">strahlend = που λάμπει/ακτινοβολεί· εδώ ενισχύει το blau (κατάλαμπρος γαλάζιος ουρανός). Αντίθεση με το Wintermusik (κυριολεκτικά: χειμωνιάτικη μουσική) που γράφει.</div><div class="nde">≈ leuchtend blauer Himmel</div></li></ul></div>
+<div class="ln" id="ln2" data-i="2"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Elision">Für'n</mark> Kapitel, das, <mark class="hl k-Idiom">Gott sei Dank</mark>, <mark class="hl k-Idiom">hinter mir liegt</mark></div><div class="gr">Για ένα κεφάλαιο που, δόξα τω Θεώ, το έχω αφήσει πίσω μου</div><div class="lit">κυριολεκτικά: που βρίσκεται πίσω μου</div><ul class="notes"><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">Für'n</span><div class="ngr">Für'n = für ein (ή für einen). Το 'n είναι συντομευμένο αόριστο άρθρο, πολύ συχνό στον προφορικό λόγο.</div><div class="nde">≈ für ein Kapitel</div></li><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">Gott sei Dank</span><div class="ngr">Πάγια έκφραση = δόξα τω Θεώ / ευτυχώς. Δεν εκφράζει θρησκευτικότητα, είναι απλώς ανακούφιση.</div><div class="nde">≈ zum Glück</div></li><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">hinter mir liegt</span><div class="ngr">etwas liegt hinter mir = κάτι ανήκει στο παρελθόν, το έχω ξεπεράσει. Εδώ: ένα δύσκολο κεφάλαιο της ζωής που τελείωσε.</div><div class="nde">≈ das vorbei ist / das ich überwunden habe</div></li></ul></div>
+<div class="ln" id="ln3" data-i="3"><div class="cue" aria-hidden="true"></div><div class="de">Folg' meinem Herzen, ist <mark class="hl k-Elision">'n</mark> simples Prinzip</div><div class="gr">Ακολουθώ την καρδιά μου, είναι μια απλή αρχή</div><ul class="notes"><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">'n</span><div class="ngr">'n = ein. Επίσης λείπει το es στην αρχή: (Es) ist 'n simples Prinzip. Τυπικό κόψιμο της ραπ/προφορικής γλώσσας.</div><div class="nde">≈ Es ist ein simples Prinzip</div></li></ul></div>
+<div class="ln" id="ln4" data-i="4"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Idiom">Mach' die Sporthalle voll</mark> und <mark class="hl k-Kulturbezug">denk' Mission complete</mark> <mark class="hl k-Slang">(Ey)</mark></div><div class="gr">Γεμίζω την αίθουσα συναυλιών (με κόσμο) και σκέφτομαι «αποστολή εξετελέσθη» (Έι)</div><ul class="notes"><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">Mach' die Sporthalle voll</span><div class="ngr">etwas voll machen = γεμίζω κάτι. Εδώ: γεμίζω την αίθουσα συναυλιών (Sporthalle = κλειστή αίθουσα συναυλιών) με θεατές = έχω επιτυχία, sold out. Σημάδι ότι «τα κατάφερε».</div><div class="nde">≈ Ich fülle die Sporthalle (mit Publikum)</div></li><li class="note k-Kulturbezug"><span class="kind">Kulturbezug · πολιτισμ. αναφορά</span><span class="term">denk' Mission complete</span><div class="ngr">denk' = (ich) denke, σκέφτομαι. Το «Mission complete» είναι αγγλισμός από βιντεοπαιχνίδια/στρατιωτικό λόγο = «αποστολή ολοκληρώθηκε». Δηλώνει ότι πέτυχε τον στόχο του.</div><div class="nde">≈ und denke: Auftrag erfüllt</div></li><li class="note k-Slang"><span class="kind">Slang · αργκό</span><span class="term">(Ey)</span><div class="ngr">Ad-lib / επιφώνημα του ραπ, χωρίς ιδιαίτερο νόημα — γεμίζει τον ρυθμό και δίνει έμφαση. Σαν «έι».</div><div class="nde">≈ (Ausruf, kein eigener Inhalt)</div></li></ul></div>
+<div class="ln" id="ln5" data-i="5"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Idiom">Angst im Nacken</mark> macht mir Beine</div><div class="gr">Ο φόβος στον σβέρκο μου με βάζει μπροστά / με κάνει να τρέχω</div><div class="lit">κυριολεκτικά: ο φόβος στον σβέρκο μου «μου φτιάχνει πόδια»</div><ul class="notes"><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">jdm Beine machen</span><div class="ngr">Ιδιωματισμός: «κάνω σε κάποιον πόδια» = τον βάζω να κινηθεί/βιαστεί, τον σπρώχνω να δράσει, τον αναγκάζω να μη χασομερά. ΔΕΝ είναι κυριολεκτικό. Εδώ: ο φόβος τον κινητοποιεί, τον κάνει να μην σταματά.</div><div class="nde">≈ treibt mich an / bringt mich in Bewegung</div></li><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">Angst im Nacken</span><div class="ngr">(jdm) sitzt etwas im Nacken = κάτι «κάθεται στον σβέρκο», σε κυνηγάει από πίσω, σε πιέζει συνεχώς. Εικόνα: ο φόβος τον ακολουθεί διαρκώς.</div><div class="nde">≈ ständige, verfolgende Angst</div></li></ul></div>
+<div class="ln" id="ln6" data-i="6"><div class="cue" aria-hidden="true"></div><div class="de">Will nie wieder <mark class="hl k-Idiom">nach unten</mark>, <mark class="hl k-Grammatik">weil ich war unten</mark>, <mark class="hl k-Slang">war scheiße</mark></div><div class="gr">Δεν θέλω ποτέ ξανά να πάω χαμηλά, γιατί ήμουν στον πάτο, ήταν σκατά</div><div class="lit">κυριολεκτικά: δεν θέλω ποτέ ξανά «προς τα κάτω», γιατί ήμουν κάτω</div><ul class="notes"><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">nach unten / war unten</span><div class="ngr">unten sein / nach unten = εικόνα για τον ψυχολογικό πάτο, την κατάθλιψη, τα χαμηλά της ζωής (όχι κυριολεκτικά «κάτω»). Will nie wieder nach unten = δεν θέλω ποτέ ξανά να πέσω τόσο χαμηλά.</div><div class="nde">≈ ganz unten / am Tiefpunkt sein</div></li><li class="note k-Grammatik"><span class="kind">Grammatik · γραμματική</span><span class="term">weil ich war unten</span><div class="ngr">Προσοχή: στα κανονικά γερμανικά μετά το weil το ρήμα πάει στο ΤΕΛΟΣ (weil ich unten war). Στον προφορικό/ραπ λόγο όμως μένει στη 2η θέση (weil ich WAR unten). Λάθος-στάνταρ, αλλά πολύ διαδεδομένο. Ίδιο φαινόμενο και στον στίχο «Weil der Scheiß ist nicht real».</div><div class="nde">≈ weil ich unten war</div></li><li class="note k-Slang"><span class="kind">Slang · αργκό</span><span class="term">war scheiße</span><div class="ngr">scheiße = χυδαία λέξη, «σκατά / χάλια». Εδώ: «ήταν χάλια / σκατά» (η περίοδος που ήταν στον πάτο). Κρατάμε το βαρύ ύφος.</div><div class="nde">≈ war furchtbar / ganz schlecht</div></li></ul></div>
+<div class="ln" id="ln7" data-i="7"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Idiom">Mach' das ab mit mir alleine</mark>, Menschen <mark class="hl k-Elision">kam'n und ging'n</mark></div><div class="gr">Τα ξεμπερδεύω αυτά μόνος μου, άνθρωποι ήρθαν κι έφυγαν</div><div class="lit">κυριολεκτικά: το «ξεκαθαρίζω/τελειώνω» αυτό μόνος μου</div><ul class="notes"><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">Mach' das ab mit mir alleine</span><div class="ngr">Το ρήμα εδώ είναι abmachen ((ich) mache ... ab), σε χαλαρή/καθομιλουμένη χρήση με τη σημασία του (etwas) mit sich (alleine) ausmachen = τα βγάζω πέρα / τα ξεκαθαρίζω μέσα μου μόνος, χωρίς να ζητάω βοήθεια. Δηλώνει ότι αντιμετωπίζει τα προβλήματά του μόνος.</div><div class="nde">≈ Ich verarbeite / kläre das alleine mit mir selbst</div></li><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">kam'n und ging'n</span><div class="ngr">kam'n = kamen, ging'n = gingen (παρελθόν πληθυντικού· πέφτει το -e-). «Άνθρωποι ήρθαν κι έφυγαν» = κόσμος πέρασε προσωρινά από τη ζωή του.</div><div class="nde">≈ Menschen kamen und gingen</div></li></ul></div>
+<div class="ln" id="ln8" data-i="8"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Idiom">Wenn du alle Freunde hast, dann hast du keine</mark></div><div class="gr">Όταν τους έχεις όλους για φίλους, τότε δεν έχεις κανέναν</div><ul class="notes"><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">Wenn du alle Freunde hast, dann hast du keine</span><div class="ngr">Αφορισμός με δομή wenn ... dann (αν/όταν ... τότε). Παράδοξο νόημα: αν θεωρείς τους πάντες φίλους, στην ουσία δεν έχεις κανέναν αληθινό φίλο. Η αντίθεση alle (όλοι) ↔ keine (κανείς) δίνει τη φιλοσοφική ένταση.</div><div class="nde">≈ Wer alle für Freunde hält, hat in Wirklichkeit keine echten Freunde</div></li></ul></div>
+<div class="ln" id="ln9" data-i="9"><div class="cue" aria-hidden="true"></div><div class="de">Komm' von <mark class="hl k-Kulturbezug">HdJ</mark>, seh', <mark class="hl k-Grammatik">in was für'm Studio</mark> ich sitz'</div><div class="gr">Έρχομαι από το HdJ (το Σπίτι της Νεολαίας), και βλέπω σε τι στούντιο κάθομαι (τώρα)</div><ul class="notes"><li class="note k-Kulturbezug"><span class="kind">Kulturbezug · πολιτισμ. αναφορά</span><span class="term">HdJ</span><div class="ngr">HdJ = Haus der Jugend, δημόσιο «Σπίτι της Νεολαίας» στη Γερμανία (χώρος για παιδιά/εφήβους, συχνά από λαϊκές γειτονιές). Συμβολίζει ταπεινή/λαϊκή καταγωγή. Αντίθεση με το επαγγελματικό στούντιο που έχει τώρα = πορεία ανόδου.</div><div class="nde">≈ Haus der Jugend (Jugendzentrum)</div></li><li class="note k-Grammatik"><span class="kind">Grammatik · γραμματική</span><span class="term">in was für'm Studio</span><div class="ngr">was für (ein) = «τι λογής / τι είδους»· εδώ θαυμαστικά: «βλέπω σε ΤΙ στούντιο κάθομαι» (δηλ. πόσο εντυπωσιακό). Η δοτική (für'm = für einem) δεν προέρχεται από το für — το was für δεν δίνει πτώση· τη δοτική την επιβάλλει το in (in + Δοτική, δηλώνει στάση/τόπο: in welchem Studio).</div><div class="nde">≈ in was für einem Studio ich (jetzt) sitze</div></li></ul></div>
+<div class="ln" id="ln10" data-i="10"><div class="cue" aria-hidden="true"></div><div class="de">Steig' <mark class="hl k-Elision">in'</mark> <mark class="hl k-Kulturbezug">Nightliner</mark>, fahr' <mark class="hl k-Elision">einma'</mark> <mark class="hl k-Kulturbezug">durch die Republik</mark></div><div class="gr">Ανεβαίνω στο Nightliner (το λεωφορείο της περιοδείας), διασχίζω μια φορά όλη τη χώρα</div><ul class="notes"><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">in'</span><div class="ngr">in' = in den (αιτιατική, κίνηση προς: steigen in + Akk.). Steig' = (ich) steige. «Ανεβαίνω στο...».</div><div class="nde">≈ Ich steige in den Nightliner</div></li><li class="note k-Kulturbezug"><span class="kind">Kulturbezug · πολιτισμ. αναφορά</span><span class="term">Nightliner</span><div class="ngr">Nightliner = το ειδικό λεωφορείο-κρεβάτι με το οποίο ταξιδεύουν οι μουσικοί στις περιοδείες (tour bus με κουκέτες). Δείχνει ότι κάνει πραγματικές περιοδείες.</div><div class="nde">≈ Tour-Bus mit Schlafplätzen</div></li><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">einma'</span><div class="ngr">einma' = einmal (μια φορά). Πέφτει το τελικό -l.</div><div class="nde">≈ einmal</div></li><li class="note k-Kulturbezug"><span class="kind">Kulturbezug · πολιτισμ. αναφορά</span><span class="term">durch die Republik</span><div class="ngr">die Republik = (καθομιλουμένη) η Ομοσπονδιακή Δημοκρατία της Γερμανίας. durch die Republik fahren = διασχίζω όλη τη Γερμανία (περιοδεία απ' άκρη σ' άκρη).</div><div class="nde">≈ quer durch Deutschland</div></li></ul></div>
+<div class="ln" id="ln11" data-i="11"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Grammatik">Könnte sagen</mark>, es ist gut so, wie es ist</div><div class="gr">Θα μπορούσα να πω πως είναι καλά έτσι όπως είναι</div><ul class="notes"><li class="note k-Grammatik"><span class="kind">Grammatik · γραμματική</span><span class="term">Könnte sagen</span><div class="ngr">Könnte = Konjunktiv II (δυνητική έγκλιση) του können: «θα μπορούσα». Λείπει το ich. Υπονοεί «θα μπορούσα να πω... αλλά» — προετοιμάζει την αντίθεση του επόμενου στίχου (Doch ...).</div><div class="nde">≈ Ich könnte sagen, es ist gut so</div></li></ul></div>
+<div class="ln" id="ln12" data-i="12"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Wortschatz">Doch</mark> geh' vierzig Stunden <mark class="hl k-Slang">knüppeln</mark> für die Zukunft meiner <mark class="hl k-Slang">Kids</mark></div><div class="gr">Όμως πάω και δουλεύω σαν σκυλί σαράντα ώρες για το μέλλον των παιδιών μου</div><div class="lit">κυριολεκτικά: πάω να «δουλέψω με το ρόπαλο» σαράντα ώρες</div><ul class="notes"><li class="note k-Wortschatz"><span class="kind">Wortschatz · λεξιλόγιο</span><span class="term">Doch</span><div class="ngr">doch = όμως / κι όμως. Φέρνει την αντίθεση με τον προηγούμενο στίχο: ναι μεν θα μπορούσε να πει ότι όλα είναι καλά, ΟΜΩΣ συνεχίζει να μοχθεί.</div><div class="nde">≈ aber / dennoch</div></li><li class="note k-Slang"><span class="kind">Slang · αργκό</span><span class="term">knüppeln</span><div class="ngr">knüppeln = (καθομιλουμένη) δουλεύω σκληρά, σπάω το κορμί μου στη δουλειά, «σκοτώνομαι» στη δουλειά. Συγγενικό με το Knüppel (ρόπαλο). vierzig Stunden = πλήρης εβδομάδα κανονικής εργασίας (σε αντίθεση με τη λάμψη της περιοδείας).</div><div class="nde">≈ hart / schwer arbeiten, schuften</div></li><li class="note k-Slang"><span class="kind">Slang · αργκό</span><span class="term">Kids</span><div class="ngr">Kids = αγγλισμός, «τα παιδιά (μου)». Πολύ συνηθισμένο στα νεανικά/ραπ γερμανικά αντί για Kinder.</div><div class="nde">≈ Kinder</div></li></ul></div>
+<div class="ln" id="ln13" data-i="13"><div class="cue" aria-hidden="true"></div><div class="de">Weil <mark class="hl k-Slang">der Scheiß</mark> <mark class="hl k-Grammatik">ist nicht real</mark>, <mark class="hl k-Elision">und egal</mark></div><div class="gr">Γιατί όλη αυτή η μαλακία δεν είναι αληθινή, και δεν έχει σημασία</div><ul class="notes"><li class="note k-Slang"><span class="kind">Slang · αργκό</span><span class="term">der Scheiß</span><div class="ngr">der Scheiß = χυδαίο, «η μαλακία / όλη αυτή η σαβούρα». Εδώ εννοεί τη λάμψη της επιτυχίας/φήμης = δεν είναι κάτι αληθινό. Κρατάμε το βαρύ ύφος.</div><div class="nde">≈ der ganze Kram / dieses Zeug (abwertend)</div></li><li class="note k-Grammatik"><span class="kind">Grammatik · γραμματική</span><span class="term">ist nicht real</span><div class="ngr">Πάλι weil με ρήμα στη 2η θέση (καθομιλουμένη), ενώ το στάνταρ θέλει weil der Scheiß nicht real IST (ρήμα στο τέλος). Ίδιο φαινόμενο με τον στίχο «weil ich war unten».</div><div class="nde">≈ weil der Scheiß nicht real ist</div></li><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">und egal</span><div class="ngr">Κομμένη φράση: (das ist) egal = «δεν έχει σημασία». ΣΗΜΑΝΤΙΚΟ: το egal εδώ ανήκει στη σύνταξη egal wie του επόμενου στίχου (egal, wie hoch die Berge sind = «όσο ψηλά κι αν...»). Ο στίχος σπάει τη μία ενιαία δομή στα δύο.</div><div class="nde">≈ und egal (wie hoch ...)</div></li></ul></div>
+<div class="ln" id="ln14" data-i="14"><div class="cue" aria-hidden="true"></div><div class="de">Wie hoch die Berge sind, auf die wir klettern, <mark class="hl k-Slang">Digga</mark>, meistens kommt <mark class="hl k-Elision">'n Tal</mark></div><div class="gr">Όσο ψηλά κι αν είναι τα βουνά που σκαρφαλώνουμε, φίλε, τις περισσότερες φορές έρχεται μια κοιλάδα</div><ul class="notes"><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">egal wie hoch die Berge ... meistens kommt 'n Tal</span><div class="ngr">Μεταφορά: όσο ψηλά κι αν ανέβεις (επιτυχία, βουνά), μετά έρχεται σχεδόν πάντα η κατηφόρα/κοιλάδα (δύσκολες στιγμές). Η ζωή έχει σκαμπανεβάσματα — μην ξεγελιέσαι από την κορυφή. Το egal (wie) ξεκινά ήδη από τον προηγούμενο στίχο.</div><div class="nde">≈ So hoch man auch steigt, danach folgt meist ein Tief</div></li><li class="note k-Slang"><span class="kind">Slang · αργκό</span><span class="term">Digga</span><div class="ngr">Digga = χαρακτηριστική αργκό του Αμβούργου, προσφώνηση φιλική = «φίλε / αδερφέ / ρε μεγάλε». Προέρχεται από το Dicker. Πολύ τυπικό στο γερμανικό ραπ, ιδίως του Αμβούργου (απ' όπου κατάγεται ο Disarstar).</div><div class="nde">≈ Alter / Kumpel</div></li><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">'n Tal</span><div class="ngr">'n = ein. Tal = κοιλάδα (μεταφορικά: χαμηλό σημείο, δύσκολη φάση).</div><div class="nde">≈ ein Tal</div></li></ul></div>
+<div class="ln" id="ln15" data-i="15"><div class="cue" aria-hidden="true"></div><div class="de">Will mit euren Psychosen nichts zu tun haben <mark class="hl k-Slang">(Ne)</mark></div><div class="gr">Δεν θέλω να έχω καμία σχέση με τις ψυχώσεις σας (Όχι)</div><ul class="notes"><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">mit etwas nichts zu tun haben (wollen)</span><div class="ngr">mit etwas nichts zu tun haben = δεν έχω καμία σχέση με κάτι, μένω μακριά από κάτι. Λείπει το ich (Will = ich will). euren Psychosen = «οι ψυχώσεις σας», η τρέλα/παράνοια των άλλων (της σκηνής/του χώρου).</div><div class="nde">≈ Ich will damit nichts zu tun haben</div></li><li class="note k-Slang"><span class="kind">Slang · αργκό</span><span class="term">(Ne)</span><div class="ngr">Ne = καθομιλουμένο «όχι» (= Nein, βόρεια/προφορική μορφή). Εδώ ad-lib που τονίζει την άρνηση.</div><div class="nde">≈ (Nein)</div></li></ul></div>
+<div class="ln" id="ln16" data-i="16"><div class="cue" aria-hidden="true"></div><div class="de">Komm' mit Fahrrad von der Arbeit, bring' <mark class="hl k-Kulturbezug">Magnolien</mark> mit vom <mark class="hl k-Elision">Blum'nladen</mark></div><div class="gr">Γυρνάω με το ποδήλατο από τη δουλειά, φέρνω μαγνόλιες από το ανθοπωλείο</div><ul class="notes"><li class="note k-Kulturbezug"><span class="kind">Kulturbezug · πολιτισμ. αναφορά</span><span class="term">Magnolien</span><div class="ngr">Magnolien = μαγνόλιες (λουλούδια). Είναι το λάιτ-μοτίβ / τίτλος του τραγουδιού: σύμβολο της αλλαγής, του ν' «ανθίζεις» μετά από δύσκολες εποχές. Η εικόνα: μια απλή, γήινη, τρυφερή στιγμή (ποδήλατο, λουλούδια) σε αντίθεση με τη λάμψη του ραπ.</div><div class="nde">≈ Magnolien (Blumen, Symbol für Neuanfang/Aufblühen)</div></li><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">Blum'nladen</span><div class="ngr">Blum'nladen = Blumenladen (ανθοπωλείο)· πέφτει το -e- (Blumen → Blum'n). bring' ... mit = (ich) bringe mit, από το mitbringen (φέρνω μαζί μου).</div><div class="nde">≈ Blumenladen</div></li></ul></div>
+<h2 class="sec">Hook</h2>
+<div class="ln" id="ln17" data-i="17"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Elision">Guck'</mark> nach oben, in der Wohnung <mark class="hl k-Idiom">brennt noch Licht</mark></div><div class="gr">Κοίτα ψηλά, στο διαμέρισμα είναι ακόμα αναμμένο το φως</div><ul class="notes"><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">Guck'</span><div class="ngr">Καθομιλουμένη προστακτική του «gucken» (κοιτάζω). Το τελικό -e του «gucke» πέφτει και μπαίνει απόστροφος. Το «gucken» είναι βορειογερμανικό/καθημερινό για «κοιτάζω», αντί του πιο ουδέτερου «schauen» / «sehen». Ταιριάζει με το αμβουργιάνικο ύφος του Disarstar.</div><div class="nde">≈ Guck / Schau nach oben</div></li><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">brennt noch Licht</span><div class="ngr">Στα γερμανικά το φως «καίει» (Licht brennt) όταν είναι αναμμένο. Δεν μεταφράζεται κυριολεκτικά στα ελληνικά («καίει το φως» δεν λέγεται)· αποδίδεται «είναι αναμμένο το φως». Εικόνα: κάποιος είναι ξύπνιος / υπάρχει ζωή στο σπίτι.</div><div class="nde">≈ in der Wohnung ist noch Licht an</div></li></ul></div>
+<div class="ln" id="ln18" data-i="18"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Grammatik">Bin zuhause</mark>, <mark class="hl k-Idiom">wusste lang nicht, wo das ist</mark></div><div class="gr">Είμαι σπίτι, καιρό δεν ήξερα πού είναι αυτό</div><ul class="notes"><li class="note k-Grammatik"><span class="kind">Grammatik · γραμματική</span><span class="term">Bin zuhause</span><div class="ngr">Παράλειψη του υποκειμένου «ich» (εγώ) στην αρχή της πρότασης — πολύ συνηθισμένο στα ρεπ/καθημερινά γερμανικά: «(Ich) bin zuhause» = «Είμαι σπίτι».</div><div class="nde">≈ Ich bin zuhause</div></li><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">wusste lang nicht, wo das ist</span><div class="ngr">Διπλό νόημα: κυριολεκτικά «δεν ήξερα πού είναι το σπίτι», αλλά μεταφορικά «για πολύ καιρό δεν ήξερα πού ανήκω / πού είναι το πραγματικό μου σπίτι». Το «zuhause» εδώ δηλώνει το αίσθημα του ανήκειν, όχι απλώς διεύθυνση. («lang» = καθομιλουμένο «lange».)</div><div class="nde">≈ wusste lange nicht, wo mein Zuhause ist</div></li></ul></div>
+<div class="ln" id="ln19" data-i="19"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Idiom">War am Boden</mark> und <mark class="hl k-Slang">gefickt</mark>, aber heute <mark class="hl k-Idiom">steh'n Magnolien aufm Tisch</mark></div><div class="gr">Ήμουν στον πάτο και γαμημένος, αλλά σήμερα έχει μαγνόλιες πάνω στο τραπέζι</div><div class="lit">κυριολεκτικά: Ήμουν στο πάτωμα και γαμημένος, αλλά σήμερα στέκονται μαγνόλιες πάνω στο τραπέζι</div><ul class="notes"><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">War am Boden</span><div class="ngr">«am Boden sein» = είμαι ψυχικά τσακισμένος, στον πάτο, γονατισμένος. Δεν εννοεί σωματικά «στο πάτωμα», αλλά συναισθηματικά στο ναδίρ. Παράλειψη του «ich»: «(Ich) war am Boden».</div><div class="nde">≈ war seelisch am Tiefpunkt / völlig fertig</div></li><li class="note k-Slang"><span class="kind">Slang · αργκό</span><span class="term">gefickt</span><div class="ngr">Πολύ χυδαία έκφραση. «gefickt sein» = είμαι κατεστραμμένος/τελειωμένος, «την έχω γαμήσει». Είναι παθητική κατάσταση (= είμαι ρημαγμένος), γι' αυτό αποδίδεται «γαμημένος» κι όχι ενεργητικά «την είχα γαμήσει». Από το «ficken» (γαμάω). Μένει χυδαίο και στα ελληνικά. Παράλειψη του «war»: «(war) gefickt».</div><div class="nde">≈ war total am Ende / völlig kaputt (vulgär)</div></li><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">steh'n Magnolien aufm Tisch</span><div class="ngr">Γερμανισμός: τα λουλούδια «stehen» (στέκονται) σε ένα τραπέζι/βάζο. Στα ελληνικά δεν λέμε «στέκονται μαγνόλιες», αλλά «έχει / υπάρχουν μαγνόλιες (πάνω) στο τραπέζι». Το «στέκονται» στο literal δείχνει μόνο την κατά λέξη δομή.</div><div class="nde">≈ auf dem Tisch stehen Magnolien / es sind Magnolien auf dem Tisch</div></li><li class="note k-Kulturbezug"><span class="kind">Kulturbezug · πολιτισμ. αναφορά</span><span class="term">Magnolien</span><div class="ngr">Οι μαγνόλιες (ανθίζουν νωρίς την άνοιξη, πριν βγάλουν φύλλα) είναι το κεντρικό μοτίβο/σύμβολο του κομματιού: αναγέννηση, ανθοφορία, νέο ξεκίνημα μετά από δύσκολη περίοδο. Έρχονται σε αντίθεση με το «am Boden / gefickt» της ίδιας σειράς.</div><div class="nde">≈ Magnolien als Symbol für Neuanfang / Aufblühen</div></li><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">aufm</span><div class="ngr">Συγχώνευση «auf dem» → «aufm» (πάνω στο). Πολύ συχνό στην προφορική γλώσσα και στο ρεπ.</div><div class="nde">≈ auf dem</div></li></ul></div>
+<div class="ln" id="ln20" data-i="20"><div class="cue" aria-hidden="true"></div><div class="de">Guck' nach oben, in der Wohnung brennt noch Licht</div><div class="gr">Κοίτα ψηλά, στο διαμέρισμα είναι ακόμα αναμμένο το φως</div></div>
+<div class="ln" id="ln21" data-i="21"><div class="cue" aria-hidden="true"></div><div class="de">Bin zuhause, wusste lang nicht, wo das ist</div><div class="gr">Είμαι σπίτι, καιρό δεν ήξερα πού είναι αυτό</div></div>
+<div class="ln" id="ln22" data-i="22"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Elision">Hab' gedacht</mark>, dass <mark class="hl k-Idiom">der da oben</mark> mich vergisst</div><div class="gr">Νόμιζα ότι αυτός εκεί πάνω με ξεχνούσε</div><ul class="notes"><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">Hab' gedacht</span><div class="ngr">«Hab'» = «habe» (βοηθητικό). Παράλειψη του -e και του υποκειμένου «ich»: «(Ich) habe gedacht» = «Νόμιζα / σκέφτηκα». Στην καθομιλουμένη ο παρακείμενος (Perfekt) λειτουργεί σαν παρελθόν, εκεί που τα ελληνικά βάζουν παρατατικό/αόριστο.</div><div class="nde">≈ Ich habe gedacht / Ich dachte</div></li><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">der da oben</span><div class="ngr">«αυτός εκεί πάνω» = ευφημισμός για τον Θεό. Πολύ συνηθισμένη γερμανική έκφραση όταν δεν θες να πεις ευθέως «Gott». Εδώ δείχνει απόσταση/αμφιβολία απέναντι στη θρησκεία — και συνδέεται με την πίστη που ξαναβρίσκεται («heute steh'n Magnolien»).</div><div class="nde">≈ Gott / der liebe Gott</div></li></ul></div>
+<div class="ln" id="ln23" data-i="23"><div class="cue" aria-hidden="true"></div><div class="de">Aber heute steh'n Magnolien aufm Tisch</div><div class="gr">Αλλά σήμερα έχει μαγνόλιες πάνω στο τραπέζι</div><div class="lit">κυριολεκτικά: Αλλά σήμερα στέκονται μαγνόλιες πάνω στο τραπέζι</div></div>
+<h2 class="sec">Part 2</h2>
+<div class="ln" id="ln24" data-i="24"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Elision">Lauf'</mark> alleine mit <mark class="hl k-Elision">mei'm</mark> <mark class="hl k-Slang">Köter</mark> <mark class="hl k-Wortschatz">an der Leine</mark> durch den Regen</div><div class="gr">Περπατάω μόνος με το σκυλί μου δεμένο στο λουρί μέσα στη βροχή</div><ul class="notes"><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">Lauf'</span><div class="ngr">Το «Lauf'» είναι κομμένο, ολόκληρο είναι «laufe» (= περπατάω/τρέχω). Στο ραπ πέφτει το τελικό -e για τον ρυθμό. Επίσης λείπει το «ich» (= εγώ) στην αρχή, εννοείται.</div><div class="nde">≈ Ich laufe alleine</div></li><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">mei'm</span><div class="ngr">Συντομευμένο «meinem» (δοτική: του δικού μου). Πολύ συχνή προφορική σύντμηση: meinem → mei'm.</div><div class="nde">≈ mit meinem</div></li><li class="note k-Slang"><span class="kind">Slang · αργκό</span><span class="term">Köter</span><div class="ngr">Υποτιμητική/αργκό λέξη για σκυλί, σαν «κοπρόσκυλο, σκυλόμουτρο». Εδώ όμως λέγεται με αγάπη/χιουμοριστικά για τον δικό του σκύλο — όχι προσβλητικά.</div><div class="nde">≈ Hund (abwertend/salopp)</div></li><li class="note k-Wortschatz"><span class="kind">Wortschatz · λεξιλόγιο</span><span class="term">an der Leine</span><div class="ngr">«Leine» = το λουρί του σκύλου. «an der Leine» = δεμένος με το λουρί.</div><div class="nde">≈ an der Hundeleine</div></li></ul></div>
+<div class="ln" id="ln25" data-i="25"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Wortschatz">Er war der Start</mark> der <mark class="hl k-Grammatik">allerbesten</mark> Zeit in meinem Leben</div><div class="gr">Αυτός ήταν η αρχή της απολύτως καλύτερης εποχής της ζωής μου</div><ul class="notes"><li class="note k-Wortschatz"><span class="kind">Wortschatz · λεξιλόγιο</span><span class="term">Er war der Start</span><div class="ngr">«Er» (= αυτός) αναφέρεται στον σκύλο του προηγούμενου στίχου: ο σκύλος ήταν η αρχή της καλύτερης περιόδου. Όχι ο «μικρός» του επόμενου στίχου — εκεί αλλάζει το πρόσωπο.</div><div class="nde">≈ Er (der Hund) war der Anfang</div></li><li class="note k-Grammatik"><span class="kind">Grammatik · γραμματική</span><span class="term">allerbesten</span><div class="ngr">Το «aller-» μπροστά από υπερθετικό το ενισχύει: «best» = καλύτερος, «allerbest» = ο απολύτως καλύτερος απ' όλους.</div><div class="nde">≈ der absolut besten</div></li></ul></div>
+<div class="ln" id="ln26" data-i="26"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Elision">Vor paar Jahren</mark> noch <mark class="hl k-Idiom">alleine gegen jeden</mark></div><div class="gr">Πριν λίγα χρόνια ακόμα ολομόναχος ενάντια σε όλους</div><ul class="notes"><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">Vor paar Jahren</span><div class="ngr">Προφορικά λείπει το «ein»: ολόκληρο «vor ein paar Jahren» (= πριν από μερικά/λίγα χρόνια).</div><div class="nde">≈ vor ein paar Jahren</div></li><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">alleine gegen jeden</span><div class="ngr">Έκφραση: μόνος εναντίον όλων, ο ένας ενάντια σε όλον τον κόσμο. Δηλώνει απομόνωση και αντιπαλότητα με τους πάντες — συχνό μοτίβο στο ραπ.</div><div class="nde">≈ allein gegen alle / gegen die ganze Welt</div></li></ul></div>
+<div class="ln" id="ln27" data-i="27"><div class="cue" aria-hidden="true"></div><div class="de">Und <mark class="hl k-Elision">auf einma'</mark> fängt <mark class="hl k-Wortschatz">mein Kleiner</mark> an, zu reden <mark class="hl k-Slang">(Ey)</mark></div><div class="gr">Και ξαφνικά ο μικρός μου αρχίζει να μιλάει (Έι)</div><ul class="notes"><li class="note k-Wortschatz"><span class="kind">Wortschatz · λεξιλόγιο</span><span class="term">mein Kleiner</span><div class="ngr">«ο μικρός μου» — εδώ ο μικρός γιος του. Η φράση «anfangen zu reden» (= αρχίζω να μιλάω) είναι η τυπική γερμανική έκφραση για το μωρό/παιδί που λέει τις πρώτες του λέξεις. ΠΡΟΣΟΧΗ: ΔΕΝ εννοεί τον σκύλο — αλλάζει το πρόσωπο. Αυτό προκύπτει από το ίδιο το κείμενο (ερμηνεία, όχι βεβαιότητα): το «Magnolien» μιλάει για την αλλαγή ζωής. Ο σκύλος ήταν «η αρχή» (στ. 2), ο γιος είναι η κορύφωση αυτής της καλής περιόδου.</div><div class="nde">≈ mein Kleiner (hier: sein kleiner Sohn, der sprechen lernt)</div></li><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">auf einma'</span><div class="ngr">Κομμένο «auf einmal» (= ξαφνικά, μονομιάς). Πέφτει το τελικό -l στην προφορά.</div><div class="nde">≈ auf einmal / plötzlich</div></li><li class="note k-Grammatik"><span class="kind">Grammatik · γραμματική</span><span class="term">fängt ... an, zu reden</span><div class="ngr">«anfangen ... zu + απαρέμφατο» = αρχίζω να κάνω κάτι. Χωριζόμενο ρήμα: «anfangen» → «fängt an», το «an» πάει νωρίς και το «zu reden» ακολουθεί.</div><div class="nde">≈ fängt an zu reden</div></li><li class="note k-Slang"><span class="kind">Slang · αργκό</span><span class="term">(Ey)</span><div class="ngr">Ad-lib / επιφώνημα του ραπ, σαν «έι, ρε». Δεν μεταφράζεται ουσιαστικά, δίνει έμφαση/ρυθμό.</div><div class="nde">≈ Ey (Ausruf, Ad-lib)</div></li></ul></div>
+<div class="ln" id="ln28" data-i="28"><div class="cue" aria-hidden="true"></div><div class="de">Seh' mir die grauen Häuser an in dieser <mark class="hl k-Wortschatz">Geisterstadt</mark></div><div class="gr">Κοιτάζω τα γκρίζα σπίτια σ' αυτή την πόλη-φάντασμα</div><ul class="notes"><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">Seh' mir ... an</span><div class="ngr">«sehe» κομμένο σε «seh'», και λείπει το «ich». Το ρήμα είναι «sich etwas ansehen» (= κοιτάζω/παρατηρώ κάτι προσεκτικά). Χωριζόμενο: «sehe mir ... an».</div><div class="nde">≈ Ich sehe mir die Häuser an</div></li><li class="note k-Wortschatz"><span class="kind">Wortschatz · λεξιλόγιο</span><span class="term">Geisterstadt</span><div class="ngr">Σύνθετη λέξη: «Geist» (= φάντασμα) + «Stadt» (= πόλη) = πόλη-φάντασμα, έρημη/άδεια πόλη χωρίς ζωή. Μεταφορικά εδώ για την γκρίζα, νεκρή ατμόσφαιρα της γειτονιάς.</div><div class="nde">≈ verlassene, leere Stadt</div></li></ul></div>
+<div class="ln" id="ln29" data-i="29"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Elision">Sitz'</mark> mit <mark class="hl k-Kulturbezug">Moe Hoheluft</mark>, wenn er <mark class="hl k-Wortschatz">Freigang</mark> hat</div><div class="gr">Κάθομαι με τον Μο στο Χόχελουφτ, όταν έχει άδεια εξόδου από τη φυλακή</div><ul class="notes"><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">Sitz'</span><div class="ngr">«sitze» κομμένο, χωρίς «ich». = κάθομαι.</div><div class="nde">≈ Ich sitze</div></li><li class="note k-Kulturbezug"><span class="kind">Kulturbezug · πολιτισμ. αναφορά</span><span class="term">Moe Hoheluft</span><div class="ngr">«Moe» = όνομα/παρατσούκλι φίλου. «Hoheluft» = συνοικία του Αμβούργου. Η πιο φυσική ανάγνωση: κάθεται με τον Μο στο Hoheluft. Ο Disarstar (γενν. Gerrit Falius, Αμβούργο) αναφέρεται συχνά σε γειτονιές της πόλης του.</div><div class="nde">≈ mit Moe (im Stadtteil) Hoheluft</div></li><li class="note k-Wortschatz"><span class="kind">Wortschatz · λεξιλόγιο</span><span class="term">Freigang</span><div class="ngr">Νομικός όρος των φυλακών: «άδεια εξόδου» κρατουμένου — όταν ένας φυλακισμένος επιτρέπεται να βγει προσωρινά έξω (συχνά για δουλειά, με επιστροφή την ίδια μέρα). Υπονοεί ότι ο Μο είναι/ήταν στη φυλακή. (Διαφέρει ελαφρώς από το «Hafturlaub» = πολυήμερη άδεια, αλλά πρακτικά το νόημα είναι «βγαίνει προσωρινά από τη φυλακή».)</div><div class="nde">≈ Freigang = (tageweiser) Ausgang aus dem Gefängnis</div></li></ul></div>
+<div class="ln" id="ln30" data-i="30"><div class="cue" aria-hidden="true"></div><div class="de">Karten <mark class="hl k-Elision">spiel'n</mark> auf <mark class="hl k-Elision">Klappstühl'n</mark></div><div class="gr">Παίζουμε χαρτιά πάνω σε πτυσσόμενες καρέκλες</div><ul class="notes"><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">spiel'n</span><div class="ngr">«spielen» κομμένο σε «spiel'n» (πέφτει το -e-). Συχνή σύντμηση στο ραπ, εδώ για να ομοιοκαταληκτεί με «Stühl'n».</div><div class="nde">≈ spielen</div></li><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">Klappstühl'n</span><div class="ngr">«Klappstühlen» κομμένο. «Klappstuhl» = πτυσσόμενη/σπαστή καρέκλα (αυτή που διπλώνει). Δοτική πληθυντικού «Klappstühlen» → «Klappstühl'n». Εικόνα λιτότητας/γειτονιάς.</div><div class="nde">≈ auf Klappstühlen</div></li></ul></div>
+<div class="ln" id="ln31" data-i="31"><div class="cue" aria-hidden="true"></div><div class="de">Geh' ins Gym, <mark class="hl k-Slang">drück'</mark> hundertfünfzig Kilo, <mark class="hl k-Idiom">stark ausseh'n und sich schwach fühl'n</mark></div><div class="gr">Πάω στο γυμναστήριο, σηκώνω εκατόν πενήντα κιλά, να δείχνεις δυνατός και να νιώθεις αδύναμος</div><ul class="notes"><li class="note k-Slang"><span class="kind">Slang · αργκό</span><span class="term">drück'</span><div class="ngr">«drücken» στο γυμναστήριο = σηκώνω/σπρώχνω βάρος (π.χ. πάγκος/bench press). Εδώ «drück' 150 Kilo» = σηκώνω 150 κιλά.</div><div class="nde">≈ ich stemme / drücke 150 Kilo (beim Krafttraining)</div></li><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">stark ausseh'n und sich schwach fühl'n</span><div class="ngr">Αντιθετικό σχήμα: «να δείχνεις δυνατός» ↔ «να νιώθεις αδύναμος». Η εξωτερική εικόνα ενάντια στο εσωτερικό συναίσθημα — κεντρικό θέμα ψυχικής υγείας/τοξικής αρρενωπότητας. «ausseh'n/fühl'n» = κομμένα «aussehen/fühlen».</div><div class="nde">≈ stark aussehen, aber sich schwach fühlen</div></li></ul></div>
+<div class="ln" id="ln32" data-i="32"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Idiom">Aufgeblüht</mark> <mark class="hl k-Elision">in 'ner</mark> Septembernacht (Sag, was sich seit <mark class="hl k-Kulturbezug">Deutscher Oktober</mark> nicht verändert hat)</div><div class="gr">Άνθισα μέσα σε μια νύχτα του Σεπτέμβρη (Πες μου, τι δεν έχει αλλάξει από τον Γερμανικό Οκτώβρη)</div><div class="lit">κυριολεκτικά: Ξάνοιξα/φούντωσα σαν λουλούδι σε μια σεπτεμβριάτικη νύχτα</div><ul class="notes"><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">Aufgeblüht</span><div class="ngr">«aufblühen» = ανθίζω (κυριολεκτικά για λουλούδι), μεταφορικά: ξανοίγομαι, αναγεννιέμαι, ανθεί ο άνθρωπος μετά από δύσκολα. Κεντρικό μοτίβο του τραγουδιού («Magnolien» = μαγνόλιες) — η αλλαγή/αναγέννηση.</div><div class="nde">≈ aufgeblüht = sich entfaltet / neu aufgelebt</div></li><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">in 'ner</span><div class="ngr">«in einer» κομμένο: «einer» → «'ner». Πολύ συχνή προφορική σύντμηση του θηλυκού άρθρου στη δοτική.</div><div class="nde">≈ in einer</div></li><li class="note k-Kulturbezug"><span class="kind">Kulturbezug · πολιτισμ. αναφορά</span><span class="term">Deutscher Oktober</span><div class="ngr">Ιστορικός/πολιτικός ΥΠΑΙΝΙΓΜΟΣ (όχι κυριολεξία). Ο όρος «Deutscher Oktober» παραπέμπει στην αποτυχημένη κομμουνιστική εξέγερση του 1923 στη Γερμανία (κατ' αναλογία με την Οκτωβριανή Επανάσταση). Εδώ μάλλον μεταφορικά: μια στιγμή ριζικής αλλαγής/επανάστασης που δεν ήρθε ποτέ — «τι άλλαξε από τότε;». Ο ίδιος ο Disarstar είναι πολιτικά αριστερός καλλιτέχνης, οπότε ταιριάζει. ΠΡΟΣΟΧΗ: παραμένει υπαινιγμός — δεν αποδίδεται με βεβαιότητα.</div><div class="nde">≈ Anspielung (unsicher) auf den gescheiterten kommunistischen Aufstand 1923 (Deutscher Oktober)</div></li></ul></div>
+<div class="ln" id="ln33" data-i="33"><div class="cue" aria-hidden="true"></div><div class="de">Will mit <mark class="hl k-Elision">dein'n</mark> Idolen nichts zu tun haben</div><div class="gr">Δεν θέλω να έχω καμία σχέση με τα είδωλά σου</div><ul class="notes"><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">dein'n</span><div class="ngr">«deinen» κομμένο: «deinen» → «dein'n» (πέφτει το -e-). Δοτική πληθυντικού «mit deinen Idolen».</div><div class="nde">≈ mit deinen Idolen</div></li><li class="note k-Idiom"><span class="kind">Idiom · ιδιωματισμός</span><span class="term">mit ... nichts zu tun haben (wollen)</span><div class="ngr">Έκφραση: «δεν θέλω να έχω καμία σχέση/πάρε-δώσε με κάτι». Δηλώνει απόρριψη/αποστασιοποίηση — εδώ από τα «είδωλα» (διασημότητες/πρότυπα) του άλλου.</div><div class="nde">≈ nichts mit etwas zu tun haben wollen = sich davon distanzieren</div></li></ul></div>
+<div class="ln" id="ln34" data-i="34"><div class="cue" aria-hidden="true"></div><div class="de"><mark class="hl k-Elision">Komm' mit Fahrrad</mark> von der Arbeit, bring' <mark class="hl k-Kulturbezug">Magnolien</mark> mit <mark class="hl k-Elision">vom Blum'nladen</mark></div><div class="gr">Γυρίζω με το ποδήλατο από τη δουλειά, φέρνω μαγνόλιες απ' το ανθοπωλείο</div><ul class="notes"><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">Komm' mit Fahrrad</span><div class="ngr">«komme» κομμένο, χωρίς «ich». «mit Fahrrad» επίσης προφορικό/απλοποιημένο (κανονικά «mit dem Fahrrad»). Εικόνα απλής, «κανονικής» καθημερινότητας — αντίθεση με την προηγούμενη ζωή.</div><div class="nde">≈ Ich komme mit dem Fahrrad</div></li><li class="note k-Kulturbezug"><span class="kind">Kulturbezug · πολιτισμ. αναφορά</span><span class="term">Magnolien</span><div class="ngr">Μαγνόλιες (λουλούδια) — ο τίτλος και το κεντρικό μοτίβο του τραγουδιού. Συμβολίζουν την αλλαγή, την ανθοφορία/αναγέννηση μετά από δύσκολη περίοδο, και τη φροντίδα/τρυφερότητα στο σπίτι. Συνδέεται με το «aufgeblüht» παραπάνω.</div><div class="nde">≈ Magnolien (Blumen, Leitmotiv des Songs: Wandel/Aufblühen)</div></li><li class="note k-Grammatik"><span class="kind">Grammatik · γραμματική</span><span class="term">bring' ... mit</span><div class="ngr">Χωριζόμενο ρήμα «mitbringen» (= φέρνω μαζί μου). «bring' ... mit» — το «mit» πάει στο τέλος.</div><div class="nde">≈ bringe Magnolien mit</div></li><li class="note k-Elision"><span class="kind">Elision · έκθλιψη</span><span class="term">vom Blum'nladen</span><div class="ngr">«Blumenladen» κομμένο σε «Blum'nladen» (πέφτει το -e-). «Blumenladen» = ανθοπωλείο. «vom» = «von dem».</div><div class="nde">≈ vom Blumenladen</div></li></ul></div>
+</main>
+
+<div class="syncsheet" id="syncsheet">
+  <div class="row">
+    <div class="cur" id="synccur">—</div>
+    <div class="tip">Spiele den Song. Tippe „JETZT", sobald die <b>angezeigte</b> Zeile beginnt.
+       <em>(Χτύπα «ΤΩΡΑ» μόλις αρχίσει ο στίχος που βλέπεις.)</em></div>
+    <button class="tap" id="synctap">JETZT ▸ Zeile aufnehmen</button>
+    <button class="mini" id="syncback">↶ Zurück</button>
+    <button class="mini" id="syncreset">⟲ Neu</button>
+    <button class="mini" id="syncsave">✓ Speichern</button>
+    <button class="mini" id="syncexport">⤓ Export</button>
+    <button class="mini" id="syncclose">✕</button>
+  </div>
+  <textarea id="syncjson" readonly spellcheck="false"></textarea>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var VIDEO_ID = "hUlpZUAjglE";
+  var NLINES = 35;
+  var LINE_DE = ["Yeah, ey", "Sitz' unter strahlend blauem Himmel und schreib' Wintermusik", "Für'n Kapitel, das, Gott sei Dank, hinter mir liegt", "Folg' meinem Herzen, ist 'n simples Prinzip", "Mach' die Sporthalle voll und denk' Mission complete (Ey)", "Angst im Nacken macht mir Beine", "Will nie wieder nach unten, weil ich war unten, war scheiße", "Mach' das ab mit mir alleine, Menschen kam'n und ging'n", "Wenn du alle Freunde hast, dann hast du keine", "Komm' von HdJ, seh', in was für'm Studio ich sitz'", "Steig' in' Nightliner, fahr' einma' durch die Republik", "Könnte sagen, es ist gut so, wie es ist", "Doch geh' vierzig Stunden knüppeln für die Zukunft meiner Kids", "Weil der Scheiß ist nicht real, und egal", "Wie hoch die Berge sind, auf die wir klettern, Digga, meistens kommt 'n Tal", "Will mit euren Psychosen nichts zu tun haben (Ne)", "Komm' mit Fahrrad von der Arbeit, bring' Magnolien mit vom Blum'nladen", "Guck' nach oben, in der Wohnung brennt noch Licht", "Bin zuhause, wusste lang nicht, wo das ist", "War am Boden und gefickt, aber heute steh'n Magnolien aufm Tisch", "Guck' nach oben, in der Wohnung brennt noch Licht", "Bin zuhause, wusste lang nicht, wo das ist", "Hab' gedacht, dass der da oben mich vergisst", "Aber heute steh'n Magnolien aufm Tisch", "Lauf' alleine mit mei'm Köter an der Leine durch den Regen", "Er war der Start der allerbesten Zeit in meinem Leben", "Vor paar Jahren noch alleine gegen jeden", "Und auf einma' fängt mein Kleiner an, zu reden (Ey)", "Seh' mir die grauen Häuser an in dieser Geisterstadt", "Sitz' mit Moe Hoheluft, wenn er Freigang hat", "Karten spiel'n auf Klappstühl'n", "Geh' ins Gym, drück' hundertfünfzig Kilo, stark ausseh'n und sich schwach fühl'n", "Aufgeblüht in 'ner Septembernacht (Sag, was sich seit Deutscher Oktober nicht verändert hat)", "Will mit dein'n Idolen nichts zu tun haben", "Komm' mit Fahrrad von der Arbeit, bring' Magnolien mit vom Blum'nladen"];
+  var LINE_SEC = ["Intro", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Hook", "Hook", "Hook", "Hook", "Hook", "Hook", "Hook", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2"];
+  var BAKED_TS = {};
+  var body = document.body;
+  var TS_KEY = "mag_ts_v1";
+
+  // ---------- Persistenz ----------
+  function load(k,d){try{var v=localStorage.getItem(k);return v===null?d:v==='1';}catch(e){return d;}}
+  function save(k,v){try{localStorage.setItem(k,v?'1':'0');}catch(e){}}
+  function loadTS(){
+    try{var v=localStorage.getItem(TS_KEY);if(v){var o=JSON.parse(v);if(o&&typeof o==='object')return o;}}catch(e){}
+    return null;
+  }
+  function saveTS(o){try{localStorage.setItem(TS_KEY,JSON.stringify(o));}catch(e){}}
+
+  // Timestamps: gespeicherte (vom Gerät) ODER eingebackene
+  var TS = loadTS() || Object.assign({}, BAKED_TS);
+  function tsCount(){var n=0;for(var k in TS){if(TS.hasOwnProperty(k))n++;}return n;}
+
+  // ---------- Anzeige-Schalter ----------
+  var showGr=load('mag_gr',true), showNotes=load('mag_notes',true), follow=load('mag_follow',true);
+  function applyToggles(){
+    body.classList.toggle('hide-gr',!showGr);
+    body.classList.toggle('hide-notes',!showNotes);
+    setOff('t-gr',!showGr); setOff('t-notes',!showNotes); setOff('t-follow',!follow);
+  }
+  function setOff(id,off){var b=document.getElementById(id);if(b)b.classList.toggle('off',off);}
+  document.getElementById('t-gr').onclick=function(){showGr=!showGr;save('mag_gr',showGr);applyToggles();};
+  document.getElementById('t-notes').onclick=function(){showNotes=!showNotes;save('mag_notes',showNotes);applyToggles();};
+  document.getElementById('t-follow').onclick=function(){follow=!follow;save('mag_follow',follow);applyToggles();};
+  applyToggles();
+
+  document.getElementById('p-min').onclick=function(){
+    body.classList.toggle('player-min');
+    this.textContent=body.classList.contains('player-min')?'Video ▴':'Video ▾';
+  };
+
+  function updNeedSync(){
+    document.getElementById('needsync').style.display = (tsCount()>0)?'none':'block';
+  }
+  updNeedSync();
+
+  // ---------- Zeit-Engine (verzweigt nach Protokoll) ----------
+  var isFile = (location.protocol === 'file:');
+  if(isFile) body.classList.add('is-file');
+  var player=null, playerReady=false;
+  var lastReal=-1, realAdvancing=false;     // rueckt getCurrentTime() vor?
+  var clockBase=null, clockOffset=0, playing=false, lastPoll=0;
+  function nowMs(){return (window.performance&&performance.now)?performance.now():(+new Date());}
+  function setClock(sec){clockOffset=sec;clockBase=nowMs();}
+  function songTime(){
+    if(playing && clockBase!=null) return clockOffset + (nowMs()-clockBase)/1000;
+    return clockOffset;
+  }
+  function bestTime(){            // exakter Wert fuer Aufnahme/Sprung
+    if(playerReady && player && player.getCurrentTime){
+      var t=player.getCurrentTime();
+      if(typeof t==='number' && !isNaN(t) && (realAdvancing || t>0)) return t;
+    }
+    return songTime();
+  }
+  function startClock(){ if(clockBase==null) clockBase=nowMs(); playing=true; reflectPlay(); }
+  function pauseClock(){ clockOffset=songTime(); playing=false; clockBase=null; reflectPlay(); }
+  function reflectPlay(){
+    var b=document.getElementById('p-play');
+    if(b){ b.classList.toggle('run',playing); b.textContent=playing?'⏸ Mitlauf':'▶ Mitlauf'; }
+  }
+
+  var pstat=document.getElementById('pstat');
+  function setStat(s){if(pstat)pstat.textContent=s;}
+
+  if(isFile){
+    // file://: einfacher Embed (spielt zuverlaessig), KEINE API -> interne Uhr von Hand
+    var ifr=document.createElement('iframe');
+    ifr.src='https://www.youtube-nocookie.com/embed/'+VIDEO_ID+'?playsinline=1&rel=0';
+    ifr.title='Disarstar – Magnolien';
+    ifr.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+    ifr.setAttribute('allowfullscreen','');
+    ifr.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+    var slot=document.getElementById('ytplayer'); if(slot) slot.replaceWith(ifr);
+    setStat('lokal · ▶ Mitlauf bei Liedanfang');
+  } else {
+    // http(s): IFrame-API (exakter Autosync ueber getCurrentTime + Status-Events)
+    window.onYouTubeIframeAPIReady=function(){
+      player=new YT.Player('ytplayer',{
+        videoId:VIDEO_ID, host:'https://www.youtube-nocookie.com',
+        playerVars:{playsinline:1, rel:0, modestbranding:1, origin:location.origin},
+        events:{
+          'onReady':function(){playerReady=true;setStat('bereit ▶');},
+          'onStateChange':onState,
+          'onError':function(e){setStat('Video-Fehler '+e.data+' – Song per QR/Link');}
+        }
+      });
+    };
+    var tag=document.createElement('script');
+    tag.src="https://www.youtube.com/iframe_api";
+    tag.onerror=function(){setStat('Player offline – Song per QR oben rechts');};
+    document.head.appendChild(tag);
+  }
+
+  function onState(e){
+    var YTS=(window.YT&&YT.PlayerState)?YT.PlayerState:{PLAYING:1,PAUSED:2,ENDED:0,BUFFERING:3};
+    if(e.data===YTS.PLAYING){ clockOffset=bestTimeAtPlay(); clockBase=nowMs(); playing=true; reflectPlay(); setStat('läuft ♪'); }
+    else if(e.data===YTS.PAUSED){ clockOffset=songTime(); playing=false; clockBase=null; reflectPlay(); setStat('pausiert'); }
+    else if(e.data===YTS.ENDED){ clockOffset=songTime(); playing=false; clockBase=null; reflectPlay(); setStat('zu Ende'); }
+    else if(e.data===YTS.BUFFERING){ clockOffset=songTime(); playing=false; clockBase=null; setStat('lädt…'); }
+  }
+  function bestTimeAtPlay(){
+    if(player && player.getCurrentTime){ var t=player.getCurrentTime(); if(typeof t==='number'&&!isNaN(t)) return t; }
+    return clockOffset;
+  }
+  // getCurrentTime pollen -> interne Uhr an echte Zeit koppeln (faengt Seeks ab)
+  function pollReal(){
+    if(playerReady && player && player.getCurrentTime){
+      var t=player.getCurrentTime();
+      if(typeof t==='number' && !isNaN(t)){
+        if(lastReal>=0 && t>lastReal+0.25) realAdvancing=true;
+        lastReal=t;
+        if(realAdvancing && playing){ clockOffset=t; clockBase=nowMs(); }
+      }
+    }
+  }
+  // manuelle Transport-Knoepfe: nur file:// (CSS blendet sie in http(s) aus).
+  // In http(s) startet stattdessen der Zeilen-Tap die interne Uhr (else-Zweig) als Fallback bei API-Ausfall.
+  (function(){
+    var pp=document.getElementById('p-play'); if(pp) pp.onclick=function(){ playing?pauseClock():startClock(); };
+    var pz=document.getElementById('p-zero'); if(pz) pz.onclick=function(){ setClock(0); };
+    reflectPlay();
+  })();
+
+  // ---------- Aktive-Zeile-Logik + Auto-Scroll ----------
+  var lns=[];
+  (function(){
+    var nodes=document.querySelectorAll('.ln');
+    for(var i=0;i<nodes.length;i++){lns.push(nodes[i]);}
+  })();
+  var activeIdx=-1;
+  var lastUserScroll=-1e9;
+  ['touchmove','wheel'].forEach(function(ev){
+    window.addEventListener(ev,function(){lastUserScroll=nowMs();},{passive:true});
+  });
+  function autoScrollOK(){return follow && (nowMs()-lastUserScroll>3500);}
+
+  function stampedIndexAt(t){
+    // groesster Zeilenindex mit Timestamp <= t
+    var best=-1, bestT=-1;
+    for(var k in TS){
+      if(!TS.hasOwnProperty(k))continue;
+      var idx=parseInt(k,10); var st=TS[k];
+      if(typeof st==='number' && st<=t+0.001 && st>=bestT){bestT=st;best=idx;}
+    }
+    return best;
+  }
+
+  function fmt2(t){t=Math.max(0,t);var m=Math.floor(t/60),s=Math.floor(t-60*m);return m+':'+(s<10?'0':'')+s;}
+  function render(){
+    if(nowMs()-lastPoll>250){
+      lastPoll=nowMs(); pollReal();
+      var pt=document.getElementById('ptime'); if(pt) pt.textContent=fmt2(songTime());
+    }
+    if(!syncMode && tsCount()>0){
+      var t=songTime();
+      var idx=stampedIndexAt(t);
+      if(idx!==activeIdx){
+        if(activeIdx>=0 && lns[activeIdx]) lns[activeIdx].classList.remove('active');
+        activeIdx=idx;
+        for(var j=0;j<lns.length;j++){
+          var li=parseInt(lns[j].getAttribute('data-i'),10);
+          lns[j].classList.toggle('done', idx>=0 && li<idx);
+        }
+        if(idx>=0 && lns[idx]){
+          lns[idx].classList.add('active');
+          if(autoScrollOK()) lns[idx].scrollIntoView({behavior:'smooth',block:'center'});
+        }
+      }
+    }
+    requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);
+
+  // Zeile antippen -> im Video dorthin springen (nur ausserhalb Sync-Modus)
+  for(var i=0;i<lns.length;i++){
+    (function(node){
+      var de=node.querySelector('.de');
+      if(!de)return;
+      de.addEventListener('click',function(){
+        if(syncMode) return;
+        var idx=parseInt(node.getAttribute('data-i'),10);
+        var st=TS[idx];
+        if(typeof st==='number'){
+          setClock(st);
+          if(!isFile && playerReady && player && player.seekTo){player.seekTo(st,true);player.playVideo();}
+          else { startClock(); }   // file://: interne Uhr ab dieser Zeile laufen lassen
+        }
+      });
+    })(lns[i]);
+  }
+
+  // ---------- Sync-Modus (Tap-to-Sync, ECHTE Zeiten) ----------
+  var syncMode=false, cursor=0, cap={};
+  var elCur=document.getElementById('synccur');
+  var elTap=document.getElementById('synctap');
+  var elJson=document.getElementById('syncjson');
+  function fmt(t){var m=Math.floor(t/60),s=t-60*m;return m+':'+(s<10?'0':'')+s.toFixed(1);}
+  function renderSync(){
+    if(cursor>=NLINES){
+      elCur.innerHTML='<b>Fertig!</b> Alle '+NLINES+' Zeilen aufgenommen. ✓ Speichern oder ⤓ Export.';
+      elTap.disabled=true; elTap.textContent='✓ Alle Zeilen aufgenommen';
+      return;
+    }
+    elTap.disabled=false; elTap.textContent='JETZT ▸ Zeile aufnehmen';
+    var done=0;for(var k in cap){if(cap.hasOwnProperty(k))done++;}
+    elCur.innerHTML='Zeile <b>'+(cursor+1)+'/'+NLINES+'</b> ('+LINE_SEC[cursor]+
+      ') · aufgenommen: '+done+'<br>« '+escapeHtml(LINE_DE[cursor])+' »';
+    var node=lns[cursor];
+    if(node && autoScrollOKsync()) node.scrollIntoView({behavior:'smooth',block:'center'});
+    highlightCursor();
+  }
+  function autoScrollOKsync(){return nowMs()-lastUserScroll>2500;}
+  function highlightCursor(){
+    for(var j=0;j<lns.length;j++) lns[j].classList.remove('active');
+    if(cursor<lns.length && lns[cursor]) lns[cursor].classList.add('active');
+  }
+  function escapeHtml(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+  function openSync(){
+    syncMode=true; body.classList.add('sync-on');
+    document.getElementById('t-sync').classList.add('on');
+    cursor=0; cap={};
+    if(activeIdx>=0 && lns[activeIdx]) lns[activeIdx].classList.remove('active');
+    activeIdx=-1;
+    body.classList.remove('sync-export');
+    renderSync();
+  }
+  function closeSync(){
+    syncMode=false; body.classList.remove('sync-on','sync-export');
+    document.getElementById('t-sync').classList.remove('on');
+    for(var j=0;j<lns.length;j++){lns[j].classList.remove('active');}
+    activeIdx=-1;
+  }
+  document.getElementById('t-sync').onclick=function(){syncMode?closeSync():openSync();};
+  document.getElementById('syncclose').onclick=closeSync;
+  elTap.onclick=function(){
+    if(cursor>=NLINES)return;
+    cap[cursor]=Math.round(bestTime()*1000)/1000;
+    cursor++;
+    renderSync();
+  };
+  document.getElementById('syncback').onclick=function(){
+    if(cursor>0){cursor--;delete cap[cursor];renderSync();}
+  };
+  document.getElementById('syncreset').onclick=function(){
+    cursor=0;cap={};body.classList.remove('sync-export');renderSync();
+  };
+  document.getElementById('syncsave').onclick=function(){
+    var clean={};for(var k in cap){if(cap.hasOwnProperty(k))clean[k]=cap[k];}
+    TS=clean; saveTS(TS); updNeedSync();
+    elCur.innerHTML='<b>Gespeichert ✓</b> ('+tsCount()+' Zeilen). Schließe den Sync-Modus – die Karaoke läuft jetzt mit.';
+  };
+  document.getElementById('syncexport').onclick=function(){
+    var clean={};for(var k in cap){if(cap.hasOwnProperty(k))clean[k]=cap[k];}
+    var txt=JSON.stringify(clean,null,1);
+    elJson.value=txt; body.classList.add('sync-export');
+    elJson.focus(); elJson.select();
+    try{
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt);}
+      else{document.execCommand('copy');}
+    }catch(e){}
+    // zusaetzlich Download anbieten
+    try{
+      var blob=new Blob([txt],{type:'application/json'});
+      var a=document.createElement('a');
+      a.href=URL.createObjectURL(blob);a.download='magnolien_timestamps.json';
+      document.body.appendChild(a);a.click();document.body.removeChild(a);
+    }catch(e){}
+  };
+})();
+</script>
+</body>
+</html>
