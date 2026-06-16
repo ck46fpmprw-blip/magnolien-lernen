@@ -46,7 +46,8 @@
        box-shadow:0 4px 14px rgba(0,0,0,.3);}
   .playerwrap .frame{position:relative;padding-bottom:56.25%;height:0;max-width:640px;margin:0 auto;
        transition:padding-bottom .25s,opacity .2s;}
-  .playerwrap iframe,.playerwrap #ytplayer{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .playerwrap iframe,.playerwrap video,.playerwrap #ytplayer{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .playerwrap video{background:#000;object-fit:contain;}
   body.player-min .playerwrap .frame{padding-bottom:0;height:0;opacity:0;}
   .pbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;
         background:var(--accent);color:#fff;font-family:system-ui,sans-serif;
@@ -66,6 +67,8 @@
         font-family:system-ui,sans-serif;font-weight:bold;font-size:.92rem;padding:12px 14px;
         -webkit-tap-highlight-color:transparent;}
   .bigyt:active{background:#a30000;}
+  body.video-mode .bigyt{display:none;}
+  body.video-mode .filehint{display:none;}
   /* manuelle Transport-Knöpfe nur bei lokalem file://-Aufruf zeigen (sonst läuft Auto-Sync) */
   body:not(.is-file):not(.static-mode) #p-play, body:not(.is-file):not(.static-mode) #p-zero{display:none;}
   .filehint{display:none;}
@@ -212,7 +215,7 @@
     <span class="pstat" id="pstat">Player lädt…</span>
     <a class="ytlink" id="ytlink" href="https://www.youtube.com/watch?v=hUlpZUAjglE" target="_blank" rel="noopener"
        title="Song direkt auf YouTube öffnen – Άνοιξε στο YouTube">▶ YouTube</a>
-    <span class="ver" id="ver" title="App-Version (für Cache-Check)">v5</span>
+    <span class="ver" id="ver" title="App-Version (für Cache-Check)">v6</span>
     <button id="p-min" title="Video ein-/ausklappen">Video ▾</button>
   </div>
 </div>
@@ -294,7 +297,8 @@ Die Knöpfe blenden <span style="color:var(--gr)">Übersetzung</span>/Erklärung
 (function(){
   "use strict";
   var VIDEO_ID = "hUlpZUAjglE";
-  var APP_VER = "v5";
+  var APP_VER = "v6";
+  var HAS_VIDEO = true;
   var NLINES = 35;
   var LINE_DE = ["Yeah, ey", "Sitz' unter strahlend blauem Himmel und schreib' Wintermusik", "Für'n Kapitel, das, Gott sei Dank, hinter mir liegt", "Folg' meinem Herzen, ist 'n simples Prinzip", "Mach' die Sporthalle voll und denk' Mission complete (Ey)", "Angst im Nacken macht mir Beine", "Will nie wieder nach unten, weil ich war unten, war scheiße", "Mach' das ab mit mir alleine, Menschen kam'n und ging'n", "Wenn du alle Freunde hast, dann hast du keine", "Komm' von HdJ, seh', in was für'm Studio ich sitz'", "Steig' in' Nightliner, fahr' einma' durch die Republik", "Könnte sagen, es ist gut so, wie es ist", "Doch geh' vierzig Stunden knüppeln für die Zukunft meiner Kids", "Weil der Scheiß ist nicht real, und egal", "Wie hoch die Berge sind, auf die wir klettern, Digga, meistens kommt 'n Tal", "Will mit euren Psychosen nichts zu tun haben (Ne)", "Komm' mit Fahrrad von der Arbeit, bring' Magnolien mit vom Blum'nladen", "Guck' nach oben, in der Wohnung brennt noch Licht", "Bin zuhause, wusste lang nicht, wo das ist", "War am Boden und gefickt, aber heute steh'n Magnolien aufm Tisch", "Guck' nach oben, in der Wohnung brennt noch Licht", "Bin zuhause, wusste lang nicht, wo das ist", "Hab' gedacht, dass der da oben mich vergisst", "Aber heute steh'n Magnolien aufm Tisch", "Lauf' alleine mit mei'm Köter an der Leine durch den Regen", "Er war der Start der allerbesten Zeit in meinem Leben", "Vor paar Jahren noch alleine gegen jeden", "Und auf einma' fängt mein Kleiner an, zu reden (Ey)", "Seh' mir die grauen Häuser an in dieser Geisterstadt", "Sitz' mit Moe Hoheluft, wenn er Freigang hat", "Karten spiel'n auf Klappstühl'n", "Geh' ins Gym, drück' hundertfünfzig Kilo, stark ausseh'n und sich schwach fühl'n", "Aufgeblüht in 'ner Septembernacht (Sag, was sich seit Deutscher Oktober nicht verändert hat)", "Will mit dein'n Idolen nichts zu tun haben", "Komm' mit Fahrrad von der Arbeit, bring' Magnolien mit vom Blum'nladen"];
   var LINE_SEC = ["Intro", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Hook", "Hook", "Hook", "Hook", "Hook", "Hook", "Hook", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2"];
@@ -352,10 +356,12 @@ Die Knöpfe blenden <span style="color:var(--gr)">Übersetzung</span>/Erklärung
   function nowMs(){return (window.performance&&performance.now)?performance.now():(+new Date());}
   function setClock(sec){clockOffset=sec;clockBase=nowMs();}
   function songTime(){
+    if(vid) return vid.currentTime || 0;                 // lokales Video = exakte Zeit
     if(playing && clockBase!=null) return clockOffset + (nowMs()-clockBase)/1000;
     return clockOffset;
   }
   function bestTime(){            // exakter Wert fuer Aufnahme/Sprung
+    if(vid) return vid.currentTime || 0;
     if(playerReady && player && player.getCurrentTime){
       var t=player.getCurrentTime();
       if(typeof t==='number' && !isNaN(t) && (realAdvancing || t>0)) return t;
@@ -396,23 +402,36 @@ Die Knöpfe blenden <span style="color:var(--gr)">Übersetzung</span>/Erklärung
     setStat('einfacher Player ('+reason+') · ▶ Mitlauf bei Liedanfang');
   }
 
-  // IMMER simples statisches Embed (hoechste Geraete-Kompatibilitaet). Die JS-API
-  // (getCurrentTime/Autosync) bringt OHNE Timestamps keinen Mehrwert -> Mitlauf laeuft
-  // ueber die interne Uhr (▶ Mitlauf bei Liedanfang / Zeile antippen). Kein origin/
-  // enablejsapi -> laxeste Validierung, umgeht den Error-153-Fall am Geraet.
+  // LOKALES Video (laeuft bei file://, OHNE YouTube/Server -> kein Error 153) mit
+  // exaktem currentTime-Sync. Fallback: statisches YouTube-Embed, falls keine Datei.
+  var vid=null;
   (function(){
     var frame=document.querySelector('.playerwrap .frame');
-    var ifr=document.createElement('iframe');
-    ifr.id='ytplayer';
-    ifr.src='https://www.youtube.com/embed/'+VIDEO_ID+'?playsinline=1&rel=0';
-    ifr.title='Disarstar – Magnolien';
-    ifr.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
-    ifr.setAttribute('allowfullscreen','');
-    ifr.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
     var slot=document.getElementById('ytplayer');
-    if(slot) slot.replaceWith(ifr); else if(frame){frame.innerHTML='';frame.appendChild(ifr);}
-    body.classList.add('static-mode');
-    setStat('▶ Mitlauf bei Liedanfang · '+APP_VER);
+    if(HAS_VIDEO){
+      vid=document.createElement('video');
+      vid.id='localvid'; vid.src='magnolien.mp4';
+      vid.controls=true; vid.preload='metadata'; vid.playsInline=true;
+      vid.setAttribute('playsinline',''); vid.setAttribute('controls','');
+      if(slot) slot.replaceWith(vid); else if(frame){frame.innerHTML='';frame.appendChild(vid);}
+      vid.addEventListener('play', function(){playing=true;reflectPlay();setStat('läuft ♪ '+APP_VER);});
+      vid.addEventListener('pause',function(){playing=false;reflectPlay();setStat('pausiert · '+APP_VER);});
+      vid.addEventListener('ended',function(){playing=false;reflectPlay();});
+      vid.addEventListener('error',function(){setStat('Video-Datei nicht gefunden · '+APP_VER);});
+      body.classList.add('video-mode');
+      setStat('▶ Play drücken · '+APP_VER);
+    } else {
+      var ifr=document.createElement('iframe');
+      ifr.id='ytplayer';
+      ifr.src='https://www.youtube.com/embed/'+VIDEO_ID+'?playsinline=1&rel=0';
+      ifr.title='Disarstar – Magnolien';
+      ifr.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+      ifr.setAttribute('allowfullscreen','');
+      ifr.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+      if(slot) slot.replaceWith(ifr); else if(frame){frame.innerHTML='';frame.appendChild(ifr);}
+      body.classList.add('static-mode');
+      setStat('▶ Mitlauf bei Liedanfang · '+APP_VER);
+    }
   })();
 
   function onState(e){
@@ -542,9 +561,12 @@ Die Knöpfe blenden <span style="color:var(--gr)">Übersetzung</span>/Erklärung
     var idx=parseInt(node.getAttribute('data-i'),10);
     var st=TS[idx];
     if(typeof st==='number'){
-      setClock(st);
-      if(!isFile && playerReady && player && player.seekTo){player.seekTo(st,true);player.playVideo();}
-      else { startClock(); }   // file://: interne Uhr ab dieser Zeile laufen lassen
+      if(vid){ vid.currentTime=st; vid.play(); }
+      else {
+        setClock(st);
+        if(!isFile && playerReady && player && player.seekTo){player.seekTo(st,true);player.playVideo();}
+        else { startClock(); }   // file://: interne Uhr ab dieser Zeile laufen lassen
+      }
     }
   }
   for(var i=0;i<lns.length;i++){
