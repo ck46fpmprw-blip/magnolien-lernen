@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Magnolien – Deutsch lernen / Μαθαίνω γερμανικά</title>
 <meta name="theme-color" content="#5a2a4a">
 <meta name="mobile-web-app-capable" content="yes">
@@ -360,7 +361,7 @@ Die Knöpfe blenden <span style="color:var(--gr)">Übersetzung</span>/Erklärung
   if(isFile){
     // file://: einfacher Embed (spielt zuverlaessig), KEINE API -> interne Uhr von Hand
     var ifr=document.createElement('iframe');
-    ifr.src='https://www.youtube-nocookie.com/embed/'+VIDEO_ID+'?playsinline=1&rel=0';
+    ifr.src='https://www.youtube.com/embed/'+VIDEO_ID+'?playsinline=1&rel=0';
     ifr.title='Disarstar – Magnolien';
     ifr.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
     ifr.setAttribute('allowfullscreen','');
@@ -371,7 +372,7 @@ Die Knöpfe blenden <span style="color:var(--gr)">Übersetzung</span>/Erklärung
     // http(s): IFrame-API (exakter Autosync ueber getCurrentTime + Status-Events)
     window.onYouTubeIframeAPIReady=function(){
       player=new YT.Player('ytplayer',{
-        videoId:VIDEO_ID, host:'https://www.youtube-nocookie.com',
+        videoId:VIDEO_ID, host:'https://www.youtube.com',
         playerVars:{playsinline:1, rel:0, modestbranding:1, origin:location.origin},
         events:{
           'onReady':function(){playerReady=true;setStat('bereit ▶');},
