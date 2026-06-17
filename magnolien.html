@@ -279,6 +279,10 @@ body.video-mode .filehint{display:none;}
 /* manuelle Transport-Knoepfe nur bei lokalem file://-Aufruf */
 body:not(.is-file):not(.static-mode) #p-play,
 body:not(.is-file):not(.static-mode) #p-zero{display:none;}
+/* ABER: eingeklapptes lokales Video (Mobil-Default) -> native Controls weg,
+   daher Play/Reset ueber die Leiste sichtbar machen (steuert das echte Video) */
+body.video-mode.player-min #p-play,
+body.video-mode.player-min #p-zero{display:inline-flex;}
 .filehint{display:none;}
 body.is-file .filehint{display:block;}
 
@@ -755,7 +759,7 @@ body.quiz-on .quizsheet{display:flex;}
     <span class="estchip" id="estchip" title="Zeiten geschätzt (Spracherkennung) – per ⏱ Sync justierbar">≈ geschätzt</span>
     <a class="ytlink" id="ytlink" href="#" target="_blank" rel="noopener"
        title="Song direkt auf YouTube öffnen – Άνοιξε στο YouTube">▶ YouTube</a>
-    <span class="ver" id="ver" title="App-Version (für Cache-Check)">v10</span>
+    <span class="ver" id="ver" title="App-Version (für Cache-Check)">v11</span>
     <button id="p-min" title="Video ein-/ausklappen">Video ▾</button>
   </div>
 </div>
@@ -859,7 +863,7 @@ Die Knöpfe blenden <span style="color:var(--gr)">Übersetzung</span>/Erklärung
   var SONGS = {"magnolien": {"slug": "magnolien", "title": "Magnolien", "artist": "Disarstar", "videoId": "hUlpZUAjglE", "videoUrl": "https://www.youtube.com/watch?v=hUlpZUAjglE", "videoFile": "magnolien.mp4", "hasVideo": true, "ts": {"0": 9.09, "1": 9.69, "2": 12.39, "3": 15.01, "4": 17.39, "5": 21.07, "6": 22.63, "7": 25.53, "8": 28.17, "9": 30.19, "10": 32.53, "11": 35.67, "12": 37.69, "13": 40.17, "14": 42.01, "15": 45.23, "16": 47.55, "17": 50.83, "18": 52.93, "19": 56.43, "20": 60.83, "21": 63.53, "22": 65.65, "23": 68.01, "24": 69.83, "25": 73.03, "26": 75.67, "27": 78.09, "28": 80.81, "29": 83.51, "30": 86.69, "31": 87.89, "32": 92.73, "33": 96.03, "34": 98.03}, "quiz": [{"t": "Yeah", "a": "ja (englisches Ad-lib, Intro-Füllsel)", "k": "Slang"}, {"t": "ey", "a": "hey / he (Aufmerksamkeits-Ruf, Füllsel)", "k": "Slang"}, {"t": "Sitz' / schreib'", "a": "Ich sitze ... und schreibe Wintermusik", "k": "Elision"}, {"t": "strahlend blauem Himmel", "a": "leuchtend blauer Himmel", "k": "Wortschatz"}, {"t": "Für'n", "a": "für ein Kapitel", "k": "Elision"}, {"t": "Gott sei Dank", "a": "zum Glück", "k": "Idiom"}, {"t": "hinter mir liegt", "a": "das vorbei ist / das ich überwunden habe", "k": "Idiom"}, {"t": "'n", "a": "Es ist ein simples Prinzip", "k": "Elision"}, {"t": "Mach' die Sporthalle voll", "a": "Ich fülle die Sporthalle (mit Publikum)", "k": "Idiom"}, {"t": "denk' Mission complete", "a": "und denke: Auftrag erfüllt", "k": "Kulturbezug"}, {"t": "(Ey)", "a": "(Ausruf, kein eigener Inhalt)", "k": "Slang"}, {"t": "jdm Beine machen", "a": "treibt mich an / bringt mich in Bewegung", "k": "Idiom"}, {"t": "Angst im Nacken", "a": "ständige, verfolgende Angst", "k": "Idiom"}, {"t": "nach unten / war unten", "a": "ganz unten / am Tiefpunkt sein", "k": "Idiom"}, {"t": "weil ich war unten", "a": "weil ich unten war", "k": "Grammatik"}, {"t": "war scheiße", "a": "war furchtbar / ganz schlecht", "k": "Slang"}, {"t": "Mach' das ab mit mir alleine", "a": "Ich verarbeite / kläre das alleine mit mir selbst", "k": "Idiom"}, {"t": "kam'n und ging'n", "a": "Menschen kamen und gingen", "k": "Elision"}, {"t": "Wenn du alle Freunde hast, dann hast du keine", "a": "Wer alle für Freunde hält, hat in Wirklichkeit keine echten Freunde", "k": "Idiom"}, {"t": "HdJ", "a": "Haus der Jugend (Jugendzentrum)", "k": "Kulturbezug"}, {"t": "in was für'm Studio", "a": "in was für einem Studio ich (jetzt) sitze", "k": "Grammatik"}, {"t": "in'", "a": "Ich steige in den Nightliner", "k": "Elision"}, {"t": "Nightliner", "a": "Tour-Bus mit Schlafplätzen", "k": "Kulturbezug"}, {"t": "einma'", "a": "einmal", "k": "Elision"}, {"t": "durch die Republik", "a": "quer durch Deutschland", "k": "Kulturbezug"}, {"t": "Könnte sagen", "a": "Ich könnte sagen, es ist gut so", "k": "Grammatik"}, {"t": "Doch", "a": "aber / dennoch", "k": "Wortschatz"}, {"t": "knüppeln", "a": "hart / schwer arbeiten, schuften", "k": "Slang"}, {"t": "Kids", "a": "Kinder", "k": "Slang"}, {"t": "der Scheiß", "a": "der ganze Kram / dieses Zeug (abwertend)", "k": "Slang"}, {"t": "ist nicht real", "a": "weil der Scheiß nicht real ist", "k": "Grammatik"}, {"t": "und egal", "a": "und egal (wie hoch ...)", "k": "Elision"}, {"t": "egal wie hoch die Berge ... meistens kommt 'n Tal", "a": "So hoch man auch steigt, danach folgt meist ein Tief", "k": "Idiom"}, {"t": "Digga", "a": "Alter / Kumpel", "k": "Slang"}, {"t": "'n Tal", "a": "ein Tal", "k": "Elision"}, {"t": "mit etwas nichts zu tun haben (wollen)", "a": "Ich will damit nichts zu tun haben", "k": "Idiom"}, {"t": "(Ne)", "a": "(Nein)", "k": "Slang"}, {"t": "Magnolien", "a": "Magnolien (Blumen, Symbol für Neuanfang/Aufblühen)", "k": "Kulturbezug"}, {"t": "Blum'nladen", "a": "Blumenladen", "k": "Elision"}, {"t": "Guck'", "a": "Guck / Schau nach oben", "k": "Elision"}, {"t": "brennt noch Licht", "a": "in der Wohnung ist noch Licht an", "k": "Idiom"}, {"t": "Bin zuhause", "a": "Ich bin zuhause", "k": "Grammatik"}, {"t": "wusste lang nicht, wo das ist", "a": "wusste lange nicht, wo mein Zuhause ist", "k": "Idiom"}, {"t": "War am Boden", "a": "war seelisch am Tiefpunkt / völlig fertig", "k": "Idiom"}, {"t": "gefickt", "a": "war total am Ende / völlig kaputt (vulgär)", "k": "Slang"}, {"t": "steh'n Magnolien aufm Tisch", "a": "auf dem Tisch stehen Magnolien / es sind Magnolien auf dem Tisch", "k": "Idiom"}, {"t": "Magnolien", "a": "Magnolien als Symbol für Neuanfang / Aufblühen", "k": "Kulturbezug"}, {"t": "aufm", "a": "auf dem", "k": "Elision"}, {"t": "Hab' gedacht", "a": "Ich habe gedacht / Ich dachte", "k": "Elision"}, {"t": "der da oben", "a": "Gott / der liebe Gott", "k": "Idiom"}, {"t": "Lauf'", "a": "Ich laufe alleine", "k": "Elision"}, {"t": "mei'm", "a": "mit meinem", "k": "Elision"}, {"t": "Köter", "a": "Hund (abwertend/salopp)", "k": "Slang"}, {"t": "an der Leine", "a": "an der Hundeleine", "k": "Wortschatz"}, {"t": "Er war der Start", "a": "Er (der Hund) war der Anfang", "k": "Wortschatz"}, {"t": "allerbesten", "a": "der absolut besten", "k": "Grammatik"}, {"t": "Vor paar Jahren", "a": "vor ein paar Jahren", "k": "Elision"}, {"t": "alleine gegen jeden", "a": "allein gegen alle / gegen die ganze Welt", "k": "Idiom"}, {"t": "mein Kleiner", "a": "mein Kleiner (hier: sein kleiner Sohn, der sprechen lernt)", "k": "Wortschatz"}, {"t": "auf einma'", "a": "auf einmal / plötzlich", "k": "Elision"}, {"t": "fängt ... an, zu reden", "a": "fängt an zu reden", "k": "Grammatik"}, {"t": "(Ey)", "a": "Ey (Ausruf, Ad-lib)", "k": "Slang"}, {"t": "Seh' mir ... an", "a": "Ich sehe mir die Häuser an", "k": "Elision"}, {"t": "Geisterstadt", "a": "verlassene, leere Stadt", "k": "Wortschatz"}, {"t": "Sitz'", "a": "Ich sitze", "k": "Elision"}, {"t": "Moe Hoheluft", "a": "mit Moe (im Stadtteil) Hoheluft", "k": "Kulturbezug"}, {"t": "Freigang", "a": "Freigang = (tageweiser) Ausgang aus dem Gefängnis", "k": "Wortschatz"}, {"t": "spiel'n", "a": "spielen", "k": "Elision"}, {"t": "Klappstühl'n", "a": "auf Klappstühlen", "k": "Elision"}, {"t": "drück'", "a": "ich stemme / drücke 150 Kilo (beim Krafttraining)", "k": "Slang"}, {"t": "stark ausseh'n und sich schwach fühl'n", "a": "stark aussehen, aber sich schwach fühlen", "k": "Idiom"}, {"t": "Aufgeblüht", "a": "aufgeblüht = sich entfaltet / neu aufgelebt", "k": "Idiom"}, {"t": "in 'ner", "a": "in einer", "k": "Elision"}, {"t": "Deutscher Oktober", "a": "Anspielung (unsicher) auf den gescheiterten kommunistischen Aufstand 1923 (Deutscher Oktober)", "k": "Kulturbezug"}, {"t": "dein'n", "a": "mit deinen Idolen", "k": "Elision"}, {"t": "mit ... nichts zu tun haben (wollen)", "a": "nichts mit etwas zu tun haben wollen = sich davon distanzieren", "k": "Idiom"}, {"t": "Komm' mit Fahrrad", "a": "Ich komme mit dem Fahrrad", "k": "Elision"}, {"t": "Magnolien", "a": "Magnolien (Blumen, Leitmotiv des Songs: Wandel/Aufblühen)", "k": "Kulturbezug"}, {"t": "bring' ... mit", "a": "bringe Magnolien mit", "k": "Grammatik"}, {"t": "vom Blum'nladen", "a": "vom Blumenladen", "k": "Elision"}], "nlines": 35, "lineDe": ["Yeah, ey", "Sitz' unter strahlend blauem Himmel und schreib' Wintermusik", "Für'n Kapitel, das, Gott sei Dank, hinter mir liegt", "Folg' meinem Herzen, ist 'n simples Prinzip", "Mach' die Sporthalle voll und denk' Mission complete (Ey)", "Angst im Nacken macht mir Beine", "Will nie wieder nach unten, weil ich war unten, war scheiße", "Mach' das ab mit mir alleine, Menschen kam'n und ging'n", "Wenn du alle Freunde hast, dann hast du keine", "Komm' von HdJ, seh', in was für'm Studio ich sitz'", "Steig' in' Nightliner, fahr' einma' durch die Republik", "Könnte sagen, es ist gut so, wie es ist", "Doch geh' vierzig Stunden knüppeln für die Zukunft meiner Kids", "Weil der Scheiß ist nicht real, und egal", "Wie hoch die Berge sind, auf die wir klettern, Digga, meistens kommt 'n Tal", "Will mit euren Psychosen nichts zu tun haben (Ne)", "Komm' mit Fahrrad von der Arbeit, bring' Magnolien mit vom Blum'nladen", "Guck' nach oben, in der Wohnung brennt noch Licht", "Bin zuhause, wusste lang nicht, wo das ist", "War am Boden und gefickt, aber heute steh'n Magnolien aufm Tisch", "Guck' nach oben, in der Wohnung brennt noch Licht", "Bin zuhause, wusste lang nicht, wo das ist", "Hab' gedacht, dass der da oben mich vergisst", "Aber heute steh'n Magnolien aufm Tisch", "Lauf' alleine mit mei'm Köter an der Leine durch den Regen", "Er war der Start der allerbesten Zeit in meinem Leben", "Vor paar Jahren noch alleine gegen jeden", "Und auf einma' fängt mein Kleiner an, zu reden (Ey)", "Seh' mir die grauen Häuser an in dieser Geisterstadt", "Sitz' mit Moe Hoheluft, wenn er Freigang hat", "Karten spiel'n auf Klappstühl'n", "Geh' ins Gym, drück' hundertfünfzig Kilo, stark ausseh'n und sich schwach fühl'n", "Aufgeblüht in 'ner Septembernacht (Sag, was sich seit Deutscher Oktober nicht verändert hat)", "Will mit dein'n Idolen nichts zu tun haben", "Komm' mit Fahrrad von der Arbeit, bring' Magnolien mit vom Blum'nladen"], "lineSec": ["Intro", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Part 1", "Hook", "Hook", "Hook", "Hook", "Hook", "Hook", "Hook", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2", "Part 2"], "tsKey": "magnolien_ts_v1"}};          // slug -> {title,artist,videoId,videoFile,hasVideo,ts,quiz,nlines,lineDe,lineSec,tsKey}
   var ORDER = ["magnolien"];          // Reihenfolge der Slugs
   var INITIAL = "magnolien";      // Start-Song
-  var APP_VER = "v10";
+  var APP_VER = "v11";
   var body = document.body;
 
   // Player klebt direkt unter der Sticky-Bar: Bar-Hoehe live als --bar-h.
@@ -905,10 +909,24 @@ Die Knöpfe blenden <span style="color:var(--gr)">Übersetzung</span>/Erklärung
     if(tw) tw.onclick=function(){showWords=!showWords;save('mag_words',showWords);applyToggles();};})();
   applyToggles();
 
+  var MIN_KEY='player_min_v1';
+  function reflectMin(){
+    var min=body.classList.contains('player-min');
+    var b=document.getElementById('p-min'); if(b) b.textContent=min?'Video ▾ einblenden':'Video ▴ ausblenden';
+  }
   document.getElementById('p-min').onclick=function(){
     body.classList.toggle('player-min');
-    this.textContent=body.classList.contains('player-min')?'Video ▴':'Video ▾';
+    reflectMin();
+    try{localStorage.setItem(MIN_KEY, body.classList.contains('player-min')?'1':'0');}catch(e){}
   };
+  // Mobil: Video standardmaessig EINGEKLAPPT (Text zuerst); per Knopf aufklappbar.
+  // Gemerkte Wahl schlaegt den Default.
+  (function(){
+    var saved=null; try{saved=localStorage.getItem(MIN_KEY);}catch(e){}
+    var startMin = (saved===null) ? (window.matchMedia && window.matchMedia('(max-width:560px)').matches) : (saved==='1');
+    if(startMin) body.classList.add('player-min');
+    reflectMin();
+  })();
 
   function updNeedSync(){
     var has = tsCount()>0;
@@ -953,7 +971,7 @@ Die Knöpfe blenden <span style="color:var(--gr)">Übersetzung</span>/Erklärung
   function pauseClock(){ clockOffset=songTime(); playing=false; clockBase=null; reflectPlay(); }
   function reflectPlay(){
     var b=document.getElementById('p-play');
-    if(b){ b.classList.toggle('run',playing); b.textContent=playing?'⏸ Mitlauf':'▶ Mitlauf'; }
+    if(b){ b.classList.toggle('run',playing); b.textContent=playing?'⏸ Pause':'▶ Play'; }
   }
   var pstat=document.getElementById('pstat');
   function setStat(s){if(pstat)pstat.textContent=s;}
@@ -1026,7 +1044,10 @@ Die Knöpfe blenden <span style="color:var(--gr)">Übersetzung</span>/Erklärung
     }
   }
   (function(){
-    var pp=document.getElementById('p-play'); if(pp) pp.onclick=function(){ playing?pauseClock():startClock(); };
+    var pp=document.getElementById('p-play'); if(pp) pp.onclick=function(){
+      if(vid){ if(vid.paused){ var _p=vid.play(); if(_p&&_p.catch)_p.catch(function(){setStat('▶ Tippe Play · Πάτα ▶');}); } else { vid.pause(); } }
+      else { playing?pauseClock():startClock(); }
+    };
     var pz=document.getElementById('p-zero'); if(pz) pz.onclick=function(){ setClock(0); if(vid){try{vid.currentTime=0;}catch(e){}} };
     reflectPlay();
   })();
